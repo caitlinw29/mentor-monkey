@@ -1,0 +1,13 @@
+:root {
+  --dark-blue: #1B4079;
+  --teal: #4D7C8A;
+  --maroon: #B75D69;
+  --beige: #DDC9B4;
+  --mint-green: #C9E4CA;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  background-color: var(--beige); 
+}
