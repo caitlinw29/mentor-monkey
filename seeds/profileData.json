@@ -1,0 +1,20 @@
+[
+  {
+    "name": "King Explosion",
+    "about": "Likes spicy food",
+    "languages": "JavaScript",
+    "user_id": 1
+  },
+  {
+    "name": "EraserHead",
+    "about": "Let me sleep",
+    "languages": "Java, Github, Insomnia",
+    "user_id": 4
+  },
+  {
+    "name": "Hey hey hey",
+    "about": "Volleyball is life",
+    "languages": "English",
+    "user_id": 2
+  }
+]
