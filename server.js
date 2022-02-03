@@ -5,6 +5,12 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
+// Twillio
+require('dotenv').load();
+const http = require('http');
+const { jwt: { AccessToken } } = require('twilio');
+const VideoGrant = AccessToken.VideoGrant;
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
