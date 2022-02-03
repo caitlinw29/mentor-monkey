@@ -52,3 +52,21 @@ nav {
   background-color: var(--dark-blue);
   height: 100px;
 } */
+
+/* images */
+img {
+  max-height: 300px;
+  width: 100%;
+  object-fit:cover;
+}
+
+.text-center {
+  margin-top: 25px; 
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+div.testimonial {
+  display: flex;
+  justify-content: center;
+}
