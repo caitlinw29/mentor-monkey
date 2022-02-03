@@ -60,13 +60,26 @@ img {
   object-fit:cover;
 }
 
+/* testimonial box */
 .text-center {
   margin-top: 25px; 
   margin-bottom: 25px;
-  text-align: center;
+  color: var(--dark-blue);
 }
 
-div.testimonial {
-  display: flex;
-  justify-content: center;
+.text-center:hover {
+  color: var(--maroon);
+  cursor: pointer;
+}
+
+p.text-width {
+  margin: 25px;
+}
+
+.card {
+  margin-top: 25px;
+  text-align: center;
+  background-color: var(--mint-green);
+  color: var(--dark-blue);
+  border-radius: 20px;
 }
