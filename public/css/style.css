@@ -14,8 +14,8 @@
 }
 
 /* font colors */
-.font-white {
-  color: white;
+.font-light {
+  color: var(--beige);
 }
 
 
@@ -24,6 +24,10 @@ body {
 }
 
 /* header and footer */
+a:hover {
+  text-decoration: none;
+}
+
 nav {
   display: flex;
   align-items: center;
