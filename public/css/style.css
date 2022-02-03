@@ -52,3 +52,34 @@ nav {
   background-color: var(--dark-blue);
   height: 100px;
 } */
+
+/* images */
+img {
+  max-height: 300px;
+  width: 100%;
+  object-fit:cover;
+}
+
+/* testimonial box */
+.text-center {
+  margin-top: 25px; 
+  margin-bottom: 25px;
+  color: var(--dark-blue);
+}
+
+.text-center:hover {
+  color: var(--maroon);
+  cursor: pointer;
+}
+
+p.text-width {
+  margin: 25px;
+}
+
+.card {
+  margin-top: 25px;
+  text-align: center;
+  background-color: var(--mint-green);
+  color: var(--dark-blue);
+  border-radius: 20px;
+}
