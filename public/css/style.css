@@ -23,7 +23,7 @@ body {
   background-color: var(--beige); 
 }
 
-/* header */
+/* header and footer */
 nav {
   display: flex;
   align-items: center;
@@ -41,3 +41,9 @@ nav {
   max-width: 65px;
   max-height: 65px;
 }
+
+/* we can add a footer later if we need to */
+/* footer {
+  background-color: var(--dark-blue);
+  height: 100px;
+} */
