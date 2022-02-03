@@ -42,6 +42,11 @@ nav {
   max-height: 65px;
 }
 
+.icon:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
 /* we can add a footer later if we need to */
 /* footer {
   background-color: var(--dark-blue);
