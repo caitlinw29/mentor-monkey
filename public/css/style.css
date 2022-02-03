@@ -8,6 +8,36 @@
   --black: #000000;
 }
 
+/* font */
+.headings-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* font colors */
+.font-white {
+  color: white;
+}
+
+
 body {
   background-color: var(--beige); 
+}
+
+/* header */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-blue);
+  height: 100px;
+}
+
+.margin-50 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.icon {
+  max-width: 65px;
+  max-height: 65px;
 }
