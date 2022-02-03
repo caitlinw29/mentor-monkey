@@ -11,9 +11,3 @@
 body {
   background-color: var(--beige); 
 }
-
-video {
-  max-width: 360px;
-  max-height: 360px;
-  margin: 20px;
-}

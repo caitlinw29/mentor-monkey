@@ -32,6 +32,6 @@
     "mysql2": "^2.3.3",
     "prettier": "^2.5.1",
     "sequelize": "^6.15.0",
-    "twilio-video": "^2.19.0"
+    "uuid": "^8.3.2"
   }
 }
