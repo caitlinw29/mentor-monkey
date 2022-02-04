@@ -1,20 +1,3 @@
-// function for handling the submit data 
-const signupForm = async (event) => { 
-    event.preventDefault();
-
-    const username = document.querySelector('#user-signup').value.trim(); 
-    const password = document.querySelector('#password-signup').value.trim();
-    const mentor = document.querySelector('#mentor-signup').value.trim();
-    // const mentee = document.querySelector('#mentee-signup').value.trim();
-
-    if (email && password && mentor) {
-        const response = await fetch('/api/users', {
-            method: 'POST', 
-            body: JSON.stringify({ username, password, mentor }), 
-            headers: { 'Content-Type': 'application/json'},
-        });
-    } 
-};
 
 // function for handing the login data 
 const loginForm = async (event) => {
@@ -23,20 +6,24 @@ const loginForm = async (event) => {
     const username = document.querySelector('#user-login').value.trim(); 
     const password = document.querySelector('#password-login').value.trim();
 
-    if (email && password) {
-        const response = await fetch('/api/users', {
+    if (username && password) {
+        const response = await fetch('/api/users/login', {
             method: 'POST', 
             body: JSON.stringify({ username, password }), 
             headers: { 'Content-Type': 'application/json'},
         });
+
+        if (response.ok) {
+            // If successful, redirect the browser to the dashboard
+            //TODO change back to dashboard, home page is for testing purposes
+            document.location.replace('/');
+        } else {
+            alert(response.statusText);
+        }
     } 
 };
 
-// calls the functions when user clicks 
-document
-    .querySelector('#sign-up-button')
-    .addEventListener('submit', signupForm);
-
+// calls the function when user submits form
 document 
-    .querySelector('#login-button')
+    .querySelector('.login-form')
     .addEventListener('submit', loginForm);
