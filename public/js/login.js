@@ -1,4 +1,3 @@
-
 // function for handing the login data 
 const loginForm = async (event) => {
     event.preventDefault(); 

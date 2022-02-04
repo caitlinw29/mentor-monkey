@@ -29,10 +29,6 @@ User.init(
         len: [8],
       },
     },
-    is_mentor: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
-    },
   },
   {
     sequelize,

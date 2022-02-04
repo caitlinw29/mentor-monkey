@@ -1,16 +1,13 @@
-let selectedOption;
-
 const signupForm = async (event) => { 
   event.preventDefault();
 
   const username = document.querySelector('#user-signup').value.trim(); 
   const password = document.querySelector('#password-signup').value.trim();
-  const is_mentor = document.querySelector('.form-check-inline').checked;  
   
   if (username && password) {
       const response = await fetch('/api/users', {
           method: 'POST', 
-          body: JSON.stringify({ username, password, is_mentor }), 
+          body: JSON.stringify({ username, password}), 
           headers: { 'Content-Type': 'application/json'},
       });
     if (response.ok) {
