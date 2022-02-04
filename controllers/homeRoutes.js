@@ -10,14 +10,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/dashboard', async (req, res) => {
   try {
     if (req.session.is_mentor) {
-      res.render('mentee_dashboard');
-    } else if (!req.session.is_mentor) {
       res.render('mentor_dashboard');
-    }
-    
+    } else if (req.session.is_mentor === false) {
+      res.render('mentee_dashboard');
+    }    
   } catch (err) {
     res.status(500).json(err);
   }
