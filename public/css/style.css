@@ -8,12 +8,122 @@
   --black: #000000;
 }
 
+/* font */
+.headings-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* font colors */
+.font-light {
+  color: var(--beige);
+}
+
+
 body {
   background-color: var(--beige); 
 }
 
+<<<<<<< HEAD
 video {
   max-width: 360px;
   max-height: 360px;
   margin: 20px;
 }
+=======
+/* header and footer */
+a:hover {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-blue);
+  height: 100px;
+}
+
+.margin-50 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.icon {
+  max-width: 65px;
+  max-height: 65px;
+}
+
+.icon:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
+/* we can add a footer later if we need to */
+/* footer {
+  background-color: var(--dark-blue);
+  height: 100px;
+} */
+
+/* images */
+img {
+  max-height: 300px;
+  width: 100%;
+  object-fit:cover;
+}
+
+/* testimonial box */
+.text-center {
+  margin-top: 25px; 
+  margin-bottom: 25px;
+  color: var(--dark-blue);
+}
+
+.text-center:hover {
+  color: var(--maroon);
+  cursor: pointer;
+}
+
+p.text-width {
+  margin: 25px;
+}
+
+.card {
+  margin-top: 25px;
+  text-align: center;
+  background-color: var(--mint-green);
+  color: var(--dark-blue);
+  border-radius: 20px;
+}
+
+/* sign up form */
+
+form {
+  margin-top: 30px;
+  background-color: var(--mint-green);
+  width: 50%;
+  border-radius: 20px;
+}
+
+div.form-container {
+  margin-left: 50px;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--dark-blue);
+  color: var(--beige);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 2px 2px 5px grey;
+}
+
+.button:hover {
+  background-color: var(--maroon);
+  color: var(--beige);
+}
+
+.user-type {
+  margin-top: 25px;
+}
+>>>>>>> cb794eed69749a843274aca12d66be7c40cbe2a6
