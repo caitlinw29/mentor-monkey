@@ -58,10 +58,26 @@ nav {
 } */
 
 /* images */
-img {
-  max-height: 300px;
+.container {
+  position: relative;
+}
+
+section .hero-image {
+  align-items: center;
   width: 100%;
-  object-fit:cover;
+  max-height: 180px; 
+  object-fit: cover;  
+  opacity: 70%;
+}
+
+.subtitle {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  background-color: #334859;
+  padding: 10px;
+  font-size: 30px; 
+  font-weight: normal;
 }
 
 /* testimonial box */
@@ -71,10 +87,10 @@ img {
   color: var(--dark-blue);
 }
 
-.text-center:hover {
+/* .text-center:hover {
   color: var(--maroon);
   cursor: pointer;
-}
+} */
 
 p.text-width {
   margin: 25px;
