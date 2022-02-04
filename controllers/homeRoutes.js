@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-  
+    res.render('homepage');
   } catch (err) {
     res.status(500).json(err);
   }
@@ -30,9 +30,9 @@ res.render(profile_form);
 
 
 
-router.get('/signup', withAuth, async (req, res) => {
+router.get('/signup', async (req, res) => {
   try {
-    
+    res.render('signup');
   } catch (err) {
     res.status(500).json(err);
   }
