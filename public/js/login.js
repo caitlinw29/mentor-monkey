@@ -14,8 +14,7 @@ const loginForm = async (event) => {
 
         if (response.ok) {
             // If successful, redirect the browser to the dashboard
-            //TODO change back to dashboard, home page is for testing purposes
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }

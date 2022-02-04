@@ -12,8 +12,7 @@ const signupForm = async (event) => {
       });
     if (response.ok) {
       // If successful, redirect the browser to the dashboard
-      //ToDo change back to dashboard, homepage is for testing purposes
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
     }
