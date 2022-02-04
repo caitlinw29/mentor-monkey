@@ -12,10 +12,18 @@ router.get('/', async (req, res) => {
 
 router.get('/dashboard', async (req, res) => {
   try {
+    const profileData = await Profile.findAll();
+
+    const profiles = profileData.map((profile) => profile.get({ plain: true }));
+
     if (req.session.is_mentor) {
-      res.render('mentor_dashboard');
+      res.render('mentor_dashboard', {
+        logged_in: true
+      });
     } else if (req.session.is_mentor === false) {
-      res.render('mentee_dashboard');
+      res.render('mentee_dashboard', {
+        profiles
+      });
     }    
   } catch (err) {
     res.status(500).json(err);
