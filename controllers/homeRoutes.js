@@ -4,13 +4,15 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage');
+    res.render('homepage', {
+      logged_in: req.session.logged_in 
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const profileData = await Profile.findAll();
 
@@ -44,6 +46,10 @@ router.get('/profile_form', withAuth, async (req, res) => {
 
 router.get('/signup', async (req, res) => {
   try {
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
     res.render('signup');
   } catch (err) {
     res.status(500).json(err);
@@ -52,6 +58,10 @@ router.get('/signup', async (req, res) => {
 
 router.get('/login', async (req, res) => {
   try {
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
     res.render('login');
   } catch (err) {
     res.status(500).json(err);
