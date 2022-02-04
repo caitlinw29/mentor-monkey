@@ -1,5 +1,6 @@
 
 const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class User extends Model {
@@ -28,22 +29,8 @@ User.init(
         len: [8],
       },
     },
-    is_mentor: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
-    },
   },
   {
-    // hooks: {
-    //   beforeCreate: async (newUserData) => {
-    //     newUserData.password = await bcrypt.hash(newUserData.password, 8);
-    //     return newUserData;
-    //   },
-    //   beforeUpdate: async (updatedUserData) => {
-    //     updatedUserData.password = await bcrypt.hash(updatedUserData.password, 8);
-    //     return updatedUserData;
-    //   },
-    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,

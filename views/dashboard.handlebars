@@ -1,1 +1,19 @@
-testing
+<btn class="btn btn-info btn-block">I'd like to mentor someone!</btn>
+
+<h4>Choose a mentor:</h4>
+{{#each profiles as |profile|}}
+  <div class="row mb-2">
+    <div class="col-md-8">
+      <h5>{{name}}</h5>
+    </div>
+    <div class="col-md-8">
+      <p>About Me:</p>
+      <p>{{about}}</p>
+      <p>My Skills:</p>
+      <p>{{languages}}</p>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" data-id="{{id}}">Choose this mentor</button>
+    </div>
+  </div>
+{{/each}}

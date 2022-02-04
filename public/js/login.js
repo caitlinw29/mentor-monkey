@@ -1,4 +1,3 @@
-
 // function for handing the login data 
 const loginForm = async (event) => {
     event.preventDefault(); 
@@ -8,15 +7,14 @@ const loginForm = async (event) => {
 
     if (username && password) {
         const response = await fetch('/api/users/login', {
-            method: 'POST', 
-            body: JSON.stringify({ username, password }), 
-            headers: { 'Content-Type': 'application/json'},
+          method: 'POST',
+          body: JSON.stringify({ username, password }),
+          headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
             // If successful, redirect the browser to the dashboard
-            //TODO change back to dashboard, home page is for testing purposes
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
