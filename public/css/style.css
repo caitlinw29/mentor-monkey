@@ -8,7 +8,7 @@
   --black: #000000;
 }
 
-/* font */
+/* font families */
 .headings-font {
   font-family: 'Roboto', sans-serif;
 }
@@ -17,7 +17,6 @@
 .font-light {
   color: var(--beige);
 }
-
 
 body {
   background-color: var(--beige); 
@@ -58,27 +57,22 @@ nav {
 } */
 
 /* images */
-.container {
-  position: relative;
-}
-
 section .hero-image {
-  align-items: center;
   width: 100%;
-  max-height: 180px; 
   object-fit: cover;  
-  opacity: 70%;
+  opacity: 90%;
 }
 
-.subtitle {
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
-  background-color: #334859;
-  padding: 10px;
-  font-size: 30px; 
-  font-weight: normal;
+/* call-to-action text */
+.action {
+  text-shadow: 2px 1px 5px gray;
 }
+
+.action:hover {
+  opacity: 75%;
+  color: var(--maroon);
+}
+
 
 /* testimonial box */
 .text-center {
@@ -86,11 +80,6 @@ section .hero-image {
   margin-bottom: 25px;
   color: var(--dark-blue);
 }
-
-/* .text-center:hover {
-  color: var(--maroon);
-  cursor: pointer;
-} */
 
 p.text-width {
   margin: 25px;
@@ -105,7 +94,6 @@ p.text-width {
 }
 
 /* sign up form */
-
 form {
   margin-top: 30px;
   background-color: var(--mint-green);
