@@ -1,16 +1,10 @@
-<btn>I'm available now!</btn>
-<div class="mint-back">
-  <p>Welcome Back, {{name}}!</p>
-  <p>About Me:</p>
-  <p>{{about}}</p>
-  <p>My Skills:</p>
-  <p>{{languages}}</p>
-</div>
-<p>Choose a mentor:</p>
-{{!-- {{#each profiles as |profile|}}
+<btn class="btn btn-info btn-block">I'd like to mentor someone!</btn>
+
+<h4>Choose a mentor:</h4>
+{{#each profiles as |profile|}}
   <div class="row mb-2">
     <div class="col-md-8">
-      <h4>{{name}}</h4>
+      <h5>{{name}}</h5>
     </div>
     <div class="col-md-8">
       <p>About Me:</p>
@@ -19,7 +13,7 @@
       <p>{{languages}}</p>
     </div>
     <div class="col-md-4">
-      <button class="btn btn-lg" data-id="{{id}}">Choose this mentor</button>
+      <button class="btn btn-primary" data-id="{{id}}">Choose this mentor</button>
     </div>
   </div>
-{{/each}} --}}
+{{/each}}
