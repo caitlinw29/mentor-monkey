@@ -19,7 +19,7 @@
 const signupForm = async (event) => { 
     event.preventDefault();
 
-    const email = document.querySelector('#document-signup').value.trim(); 
+    const username = document.querySelector('#user-signup').value.trim(); 
     const password = document.querySelector('#password-signup').value.trim();
     const mentor = document.querySelector('#mentor-signup').value.trim();
     const mentee = document.querySelector('#mentee-signup').value.trim();
@@ -27,7 +27,7 @@ const signupForm = async (event) => {
     if (email && password && mentor) {
         const response = await fetch('/api/users', {
             method: 'POST', 
-            body: JSON.stringify({ email, password, mentor }), 
+            body: JSON.stringify({ username, password, mentor }), 
             headers: { 'Content-Type': 'application/json'},
         });
     } 
