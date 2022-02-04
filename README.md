@@ -3,13 +3,14 @@ MentorMonkey bridges skilled developers with mentees for on-the-spot mentorship
 
 PUT LINK TO DEPLOYED SITE HERE
 
-# User Story
-mentorMonkey is designed to help skilled developers hone their coding skills while mentoring less experienced coders.  
+## User Story
+As a coding learner, I want a way to connect via video with experienced coders to get help. 
+As an experienced coder, I want a way to connect via video with coding learners to help them become more proficient. 
 
-# Description
+## Description
 mentorMonkey is a full stack application our team designed and built using Bootstrap, Handlebars, JavaScript, and APIs. 
 
-# Issues
+## Issues
 GIVEN: I go to MentorMonkey
 WHEN: The landing page loads
 THEN: I see Description(with image),  Call to Action, header with signup/login and other links
@@ -60,10 +61,10 @@ Given: The mentor no longer wants to help
 When: they click the button to remove their availability
 Then: They are taken off the search page
 
-# Screenshots
+## Screenshots
  PUT IMAGES HERE!
 
-# Project Requirements
+## Project Requirements
  * Use Node.js and Express.js to create a RESTful API.
  * Use Handlebars.js as the template engine.
  * Use MySQL and the Sequelize ORM for the database.
@@ -79,13 +80,13 @@ Then: They are taken off the search page
  * Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
  * Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-# Usage
+## Usage
 This is a web-based application. 
 
-# License
+## License
  * MIT License
  
-# Contributors
+## Contributors
 Steph Fajardo
 stfajardo@gmail.com
 
@@ -98,8 +99,8 @@ caitlinwall96@gmail.com
 Alisa Wolfram
 ealisa818@gmail.com
 
-# Presentation
+## Presentation
  PUT LINK HERE!
  
-# Deployed Link
+## Deployed Link
  PUT LINK HERE!
