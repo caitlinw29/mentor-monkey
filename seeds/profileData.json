@@ -3,18 +3,21 @@
     "name": "King Explosion",
     "about": "Likes spicy food",
     "languages": "JavaScript",
+    "is_mentor": false,
     "user_id": 1
   },
   {
     "name": "EraserHead",
     "about": "Let me sleep",
     "languages": "Java, Github, Insomnia",
+    "is_mentor": false,
     "user_id": 4
   },
   {
     "name": "Hey hey hey",
     "about": "Volleyball is life",
     "languages": "English",
+    "is_mentor": false,
     "user_id": 2
   }
 ]

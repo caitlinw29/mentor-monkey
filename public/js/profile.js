@@ -1,4 +1,4 @@
-const newFormHandler = async (event => {
+const newFormHandler = async (event) => {
     event.preventDefault();
 
 const name = document.querySelector('#user-name').value.trim();
@@ -13,7 +13,7 @@ if (name && language) {
 } else {
     alert('Failed to create a profile')
     }
-});
+};
 
 
 

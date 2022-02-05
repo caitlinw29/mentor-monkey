@@ -10,6 +10,7 @@ router.post('/', withAuth, async (req, res) => {
       name: req.body.name,
       about: req.body.about,
       languages: req.body.languages,
+      is_mentor: false,
     });
     res.status(200).json(newProfile);
   } catch (err) {
@@ -19,14 +20,25 @@ router.post('/', withAuth, async (req, res) => {
 
     // Send the newly created row as a JSON object
 
-//update profile with put?
-router.put('/:id', withAuth, async (req, res) => {
+//update profile with put to allow user to be a mentor
+router.put('/', withAuth, async (req, res) => {
   try {
-    const profileData = await Profile.update({
-      ...req.user_id,
-      user_id: req.session.user_id,
+
+    const profile = await Profile.update(
+    {
+      is_mentor: true,
+    },
+    {
+      where: {
+        id: req.session.user_id,
+      },
     });
-    res.status(200).json(profileData);
+   
+    // const profileData = await Profile.update({
+    //   ...req.body,
+    //   user_id: req.session.user_id,
+    // });
+    res.status(200).json(profile);
   } catch (err) {
     res.status(400).json(err)
   }
