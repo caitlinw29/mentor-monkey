@@ -139,27 +139,26 @@ div.form-container {
 /* responsive hamburger button*/
 .hamburger {
   position: absolute;
-  top: 40px;
+  top: 25px;
   right: 40px;
   display: none;
   flex-direction: column;
   justify-content: space-between; 
-  width: 30px; 
-  height: 21px;
+  width: 40px; 
 }
 
-.hamburger .bar {
-  height: 3px; 
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* @media screen and (max-width: 810px) {   
-  a.hamburger {
+@media screen and (max-width: 810px) {   
+  div.hamburger {
     display: flex;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+    opacity: 80%;
   }
 
   img.icon.margin-50 {
     display: none;
   }
-} */
+}
+
