@@ -1,7 +1,11 @@
-var hamburger = document.getElementsByClassName("hamburger")[0]
+const hamburger = document.getElementsByClassName("ham-menu")[0]
+
+const profile = document.getElementsByClassName("nav-links")[0] 
+
+const loginLogout = document.getElementsByClassName("icon")[0]
 
 hamburger.addEventListener("click",() => {
+    console.log("yes!");
     profile.classList.toggle("active"); 
-    dashboard.classList.toggle("active");
-    login.classList.toggle("active");
+    loginLogout.classList.toggle("active");
 }) 
