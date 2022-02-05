@@ -13,8 +13,15 @@
 </head>
 
 <body>
+  <div>
+  <a href="#" class="hamburger"> 
+    <span class="bar color-light"></span>
+    <span class="bar color-light"></span>
+    <span class="bar color-light"></span>
+  </a>
+  </div>
   <nav>
-    <a href="/"><h1 class="font-light headings-font margin-50">MentorMonkey</h1></a>
+    <a href="/"><h1 class="color-light headings-font margin-50">MentorMonkey</h1></a>
     {{#if logged_in}}
       <div>
         <a class="headings-font nav-links" href="/profile_form">My Profile</a>
@@ -25,6 +32,7 @@
         <a href="/login"><img src="/img/login.png" alt="a login logo" class="icon margin-50"/></a>
       {{/if}}
   </nav>
+
   <main>
     <!-- Render the sub layout -->
     {{{ body }}}
@@ -37,3 +45,5 @@
 
 </body>
 </html>
+
+<script src="../../public/js/hamburger.js"></script>
