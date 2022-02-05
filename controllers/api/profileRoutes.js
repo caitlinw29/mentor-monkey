@@ -10,14 +10,14 @@ router.post('/', withAuth, async (req, res) => {
       name: req.body.name,
       about: req.body.about,
       languages: req.body.languages,
+      is_mentor: false,
+      user_id: req.session.user_id,
     });
     res.status(200).json(newProfile);
   } catch (err) {
      res.status(400).json(err);
   }
 });
-
-    // Send the newly created row as a JSON object
 
 //update profile with put?
 router.put('/:id', withAuth, async (req, res) => {
@@ -32,5 +32,6 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 
 });
+
 
 module.exports = router;

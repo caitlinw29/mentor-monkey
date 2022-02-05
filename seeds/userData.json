@@ -1,22 +1,18 @@
 [
   {
     "username": "Bakugo",
-    "password": "12345678",
-    "is_mentor": false
+    "password": "12345678"
   },
   {
     "username": "Bokuto",
-    "password": "12345678",
-    "is_mentor": true
+    "password": "12345678"
   },
   {
     "username": "Inosuke",
-    "password": "12345678",
-    "is_mentor": false
+    "password": "12345678"
   },
   {
     "username": "Aizawa",
-    "password": "12345678",
-    "is_mentor": true
+    "password": "12345678"
   }
 ]

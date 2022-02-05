@@ -14,12 +14,12 @@ router.get('/', async (req, res) => {
 
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    const profileData = await Profile.findAll();
+    const profileData = await Profile.findAll({ where: { is_mentor: true } });
 
-    const profiles = profileData.map((profile) => profile.get({ plain: true }));
+    const mentorProfiles = profileData.map((profile) => profile.get({ plain: true }));
 
     res.render('dashboard', {
-      profiles,
+      mentorProfiles,
       logged_in: true
     });   
   } catch (err) {

@@ -22,6 +22,10 @@ Profile.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    is_mentor: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
