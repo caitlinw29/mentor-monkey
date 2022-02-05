@@ -14,7 +14,7 @@
 }
 
 /* font colors */
-.font-light {
+.color-light {
   color: var(--beige);
 }
 
@@ -42,6 +42,16 @@ nav {
   height: 100px;
 }
 
+.nav-links {
+  font-size: 20px;
+  color: var(--mint-green);
+  margin: 20px;
+}
+
+.nav-links:hover {
+  color: var(--beige);
+}
+
 .margin-50 {
   margin-left: 50px;
   margin-right: 50px;
@@ -56,6 +66,7 @@ nav {
   opacity: 70%;
   cursor: pointer;
 }
+
 
 /* we can add a footer later if we need to */
 /* footer {
@@ -113,6 +124,7 @@ div.form-container {
   width: 100%;
 }
 
+/* sign up and login buttons */
 .button {
   background-color: var(--dark-blue);
   color: var(--beige);
@@ -130,4 +142,35 @@ div.form-container {
 .user-type {
   margin-top: 25px;
 }
+<<<<<<< HEAD
 >>>>>>> cb794eed69749a843274aca12d66be7c40cbe2a6
+=======
+
+/* responsive hamburger button*/
+.hamburger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between; 
+  width: 30px; 
+  height: 21px;
+}
+
+.hamburger .bar {
+  height: 3px; 
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* @media screen and (max-width: 810px) {   
+  a.hamburger {
+    display: flex;
+  }
+
+  img.icon.margin-50 {
+    display: none;
+  }
+} */
+>>>>>>> 98c6f4351317f995575a0693d7bd40694d3ebc4f
