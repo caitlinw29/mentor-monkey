@@ -2,19 +2,24 @@ const router = require('express').Router();
 const { User, Profile } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//update is_mentor with 'put' to allow user to post their profile 
+router.put('/', withAuth, async (req, res) => {
+  try {
+    const profile = await Profile.update(
+    {
+      is_mentor: true,
+    },
+    {
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
 
-router.get('/', withAuth, async (req, res) => {
-  // try {
-  //   const profileData = await Profile.findAll({ where: { is_mentor: true } });
-  //   const mentorProfiles = profileData.map((profile) => profile.get({ plain: true }));
-  //   // const profile = await Profile.findOne({ where: { user_id: req.session.user_id } }); 
-  //   res.render('dashboard', {
-  //     mentorProfiles
-  //   });   
-  //   res.status(200).json(mentorProfiles);
-  // } catch (err) {
-  //    res.status(400).json(err);
-  // }
+    res.status(200).json(profile);
+  } catch (err) {
+    res.status(400).json(err)
+  }
+
 });
 
 module.exports = router;
