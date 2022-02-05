@@ -2,8 +2,8 @@
         <div class="row">
             <div class="col">
                 <ul id="chat-messages"></ul>
-                    <form id="form" action="">
-                    <input id="input" autocomplete="off" /><button>Send</button>
+                    <form id="chat-form" action="">
+                    <input id="chat-input" autocomplete="off" /><button>Send</button>
                     </form>
             </div>
         </div>
@@ -12,9 +12,9 @@
     <script>
       var socket = io();
     
-      var messages = document.getElementById('messages');
-      var form = document.getElementById('form');
-      var input = document.getElementById('input');
+      var messages = document.getElementById('chat-messages');
+      var form = document.getElementById('chat-form');
+      var input = document.getElementById('chat-input');
     
       form.addEventListener('submit', function(e) {
         e.preventDefault();

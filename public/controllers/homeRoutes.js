@@ -26,8 +26,10 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-//ToDo may need a video route added as well depending on how Twilio/WebRTC works
-
+//Chat route
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/chat.handlebars');
+});
 
 
 router.get('/signup', withAuth, async (req, res) => {
