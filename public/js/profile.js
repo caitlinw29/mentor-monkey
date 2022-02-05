@@ -1,3 +1,4 @@
+//create a profile
 const profileHandler = async (event) => {
     event.preventDefault();
 
@@ -23,4 +24,5 @@ const profileHandler = async (event) => {
      }
 };
 
+//function runs when form is submitted
 document.querySelector('.new-profile-form').addEventListener('submit', profileHandler);

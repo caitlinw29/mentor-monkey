@@ -2,10 +2,11 @@ const router = require('express').Router();
 const { Profile } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//create profile 
-// this route is for /api/profile
+
+// route to create profile if user is logged in
 router.post('/', withAuth, async (req, res) => {
   try {
+    //create a profile using the req.body and set is_mentor to false to start
     const newProfile = await Profile.create({
       name: req.body.name,
       about: req.body.about,
@@ -19,7 +20,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-//update profile with put?
+//route to update profile 
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const profileData = await Profile.update({

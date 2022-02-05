@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Profile } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//update is_mentor with 'put' to allow user to post their profile 
+//route to update is_mentor with 'put' which allows user to post their profile 
 router.put('/', withAuth, async (req, res) => {
   try {
     const profile = await Profile.update(
@@ -22,7 +22,7 @@ router.put('/', withAuth, async (req, res) => {
 
 });
 
-//update is_mentor with 'put' to allow user to take their profile down
+// route to allow user to take their profile down by changing is_mentor to false
 router.put('/quit', withAuth, async (req, res) => {
   try {
     const profile = await Profile.update(

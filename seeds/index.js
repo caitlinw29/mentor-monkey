@@ -1,3 +1,4 @@
+//sample seed data - passwords are not hashed for seeds though. Used to check table relationships, make your own user to test the website functionality
 const sequelize = require('../config/connection');
 const { User, Profile } = require('../models');
 
