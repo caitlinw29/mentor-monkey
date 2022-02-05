@@ -2,14 +2,17 @@ const router = require('express').Router();
 const { Profile } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//create profile 
-// this route is for /api/profile
+
+// route to create profile if user is logged in
 router.post('/', withAuth, async (req, res) => {
   try {
+    //create a profile using the req.body and set is_mentor to false to start
     const newProfile = await Profile.create({
       name: req.body.name,
       about: req.body.about,
       languages: req.body.languages,
+      is_mentor: false,
+      user_id: req.session.user_id,
     });
     res.status(200).json(newProfile);
   } catch (err) {
@@ -17,9 +20,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-    // Send the newly created row as a JSON object
-
-//update profile with put?
+//route to update profile 
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const profileData = await Profile.update({
@@ -32,5 +33,6 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 
 });
+
 
 module.exports = router;
