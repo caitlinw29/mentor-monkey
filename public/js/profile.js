@@ -5,12 +5,11 @@ const profileHandler = async (event) => {
     const name = document.querySelector('#user-name').value.trim();
     const about = document.querySelector('#user-about').value.trim();
     const languages = document.querySelector('#user-language').value.trim();
-    const is_mentor = false;
 
     if (name && languages) {
         const response = await fetch('/api/profile', {
             method: 'POST',
-            body: JSON.stringify({ name, about, languages, is_mentor }),
+            body: JSON.stringify({ name, about, languages }),
             headers: { 'Content-Type': 'application/json' },
         })
         if (response.ok) {
