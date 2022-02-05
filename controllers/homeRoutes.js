@@ -40,7 +40,7 @@ router.get('/profile_form', withAuth, async (req, res) => {
 });
 
 //Chat route
-app.get('/chat', async (req, res) => {
+router.get('/chat', async (req, res) => {
   try{
     res.render('chat');
   } catch (err) {
