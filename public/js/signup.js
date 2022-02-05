@@ -1,3 +1,4 @@
+//form to create a user
 const signupForm = async (event) => { 
   event.preventDefault();
 
@@ -20,6 +21,7 @@ const signupForm = async (event) => {
   
 };
 
+//function runs when form is submitted
 document
     .querySelector('.signup-form')
     .addEventListener('submit', signupForm);

@@ -1,6 +1,7 @@
 const User = require('./User');
 const Profile = require('./Profile');
 
+//one to one relationship between profile and user
 User.hasOne(Profile, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',

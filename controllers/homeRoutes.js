@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Profile, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+//route to render homepage
 router.get('/', async (req, res) => {
   try {
     res.render('homepage', {
@@ -12,14 +13,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route to render the dashboard, only if user is signed in
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    const profileData = await Profile.findAll();
+    //find all profiles where is_mentor is true to display the profiles of those who wish to be on the current mentor list
+    const profileData = await Profile.findAll({ where: { is_mentor: true } });
 
-    const profiles = profileData.map((profile) => profile.get({ plain: true }));
+    const mentorProfiles = profileData.map((profile) => profile.get({ plain: true }));
 
     res.render('dashboard', {
-      profiles,
+      mentorProfiles,
       logged_in: true
     });   
   } catch (err) {
@@ -27,6 +30,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+//route to render the profile form 
 router.get('/profile_form', withAuth, async (req, res) => {
   try {
     res.render('profile_form');
@@ -38,9 +42,10 @@ router.get('/profile_form', withAuth, async (req, res) => {
 //ToDo may need a video route added as well depending on how Twilio/WebRTC works
 
 
-
+//route to render the signup form 
 router.get('/signup', async (req, res) => {
   try {
+    //if already signed in, redirect to homepage
     if (req.session.logged_in) {
       res.redirect('/');
       return;
@@ -51,8 +56,10 @@ router.get('/signup', async (req, res) => {
   }
 });
 
+//route to render the login form
 router.get('/login', async (req, res) => {
   try {
+    //if already logged in, redirect to homepage
     if (req.session.logged_in) {
       res.redirect('/');
       return;

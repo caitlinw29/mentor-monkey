@@ -18,6 +18,7 @@
   </div>
   <nav>
     <a href="/"><h1 class="color-light headings-font margin-50">MentorMonkey</h1></a>
+    <!--Show nav links depending on if the user is logged in -->
     {{#if logged_in}}
       <div class="overlay">
         <a class="headings-font nav-links" href="/profile_form">My Profile</a>
@@ -46,7 +47,6 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-
   <script src="/js/hamburger.js"></script>
 </body>
 </html>
