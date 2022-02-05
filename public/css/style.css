@@ -139,27 +139,82 @@ div.form-container {
 /* responsive hamburger button*/
 .hamburger {
   position: absolute;
-  top: 40px;
+  top: 25px;
   right: 40px;
   display: none;
   flex-direction: column;
   justify-content: space-between; 
-  width: 30px; 
-  height: 21px;
+  width: 40px; 
 }
 
-.hamburger .bar {
-  height: 3px; 
-  width: 100%;
-  border-radius: 10px;
+.log-hamburger {
+  display: none;
 }
 
-/* @media screen and (max-width: 810px) {   
-  a.hamburger {
+@media screen and (max-width: 810px) {  
+  
+  h1 {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    height: 138px;
+    justify-content: space-evenly;
+  }
+
+  div.hamburger {
     display: flex;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+    opacity: 80%;
   }
 
   img.icon.margin-50 {
     display: none;
   }
-} */
+
+  .log-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex; 
+    flex-direction: row;
+    color: var(--maroon);
+    font-weight: bold;
+  }
+
+  .dashboard {
+    display: none;
+  }
+
+  .dashboard.active {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .log-hamburger {
+    display: none;
+  }
+
+  .log-hamburger.active {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .overlay {
+    background-color: var(--mint-green);
+    border-radius: 15px;
+    display: flex; 
+    flex-direction: row;
+  }
+}
+
