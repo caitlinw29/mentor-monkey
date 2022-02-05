@@ -32,6 +32,7 @@
     "handlebars-form-helpers": "^0.1.4",
     "mysql2": "^2.3.3",
     "prettier": "^2.5.1",
-    "sequelize": "^6.15.0"
+    "sequelize": "^6.15.0",
+    "socket.io": "^4.4.1"
   }
 }
