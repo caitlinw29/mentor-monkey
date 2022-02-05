@@ -22,4 +22,24 @@ router.put('/', withAuth, async (req, res) => {
 
 });
 
+//update is_mentor with 'put' to allow user to take their profile down
+router.put('/quit', withAuth, async (req, res) => {
+  try {
+    const profile = await Profile.update(
+    {
+      is_mentor: false,
+    },
+    {
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+
+    res.status(200).json(profile);
+  } catch (err) {
+    res.status(400).json(err)
+  }
+
+});
+
 module.exports = router;
