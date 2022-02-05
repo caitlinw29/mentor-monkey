@@ -35,6 +35,16 @@ nav {
   height: 100px;
 }
 
+.nav-links {
+  font-size: 20px;
+  color: var(--mint-green);
+  margin: 20px;
+}
+
+.nav-links:hover {
+  color: var(--beige);
+}
+
 .margin-50 {
   margin-left: 50px;
   margin-right: 50px;
@@ -106,6 +116,7 @@ div.form-container {
   width: 100%;
 }
 
+/* sign up and login buttons */
 .button {
   background-color: var(--dark-blue);
   color: var(--beige);
