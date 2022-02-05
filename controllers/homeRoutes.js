@@ -42,11 +42,10 @@ router.get('/profile_form', withAuth, async (req, res) => {
 //Chat route
 app.get('/chat', async (req, res) => {
   try{
-    res.render(__dirname + '/chat.handlebars');
+    res.render('chat');
   } catch (err) {
     res.status(500).json(err);
   }
-  
 });
 
 //route to render the signup form 
