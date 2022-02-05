@@ -1,38 +1,27 @@
+// function for handing the login data 
+const loginForm = async (event) => {
+    event.preventDefault(); 
 
+    const username = document.querySelector('#user-login').value.trim(); 
+    const password = document.querySelector('#password-login').value.trim();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function for handling the submit data 
-const signupForm = async (event) => { 
-    event.preventDefault();
-
-    const username = document.querySelector('#user-signup').value.trim(); 
-    const password = document.querySelector('#password-signup').value.trim();
-    const mentor = document.querySelector('#mentor-signup').value.trim();
-    const mentee = document.querySelector('#mentee-signup').value.trim();
-
-    if (email && password && mentor) {
-        const response = await fetch('/api/users', {
-            method: 'POST', 
-            body: JSON.stringify({ username, password, mentor }), 
-            headers: { 'Content-Type': 'application/json'},
+    if (username && password) {
+        const response = await fetch('/api/users/login', {
+          method: 'POST',
+          body: JSON.stringify({ username, password }),
+          headers: { 'Content-Type': 'application/json' },
         });
+
+        if (response.ok) {
+            // If successful, redirect the browser to the dashboard
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
+        }
     } 
 };
 
-document
-    .querySelector('#sign-up-button')
-    .addEventListener('submit', signupForm);
+// calls the function when user submits form
+document 
+    .querySelector('.login-form')
+    .addEventListener('submit', loginForm);

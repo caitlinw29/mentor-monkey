@@ -29,6 +29,7 @@
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
+    "handlebars-form-helpers": "^0.1.4",
     "mysql2": "^2.3.3",
     "prettier": "^2.5.1",
     "sequelize": "^6.15.0",

@@ -14,8 +14,13 @@
 
 <body>
   <nav>
-    <a href="/"><h1 class="font-light headings-font margin-50">mentorMonkey</h1></a>
-    <a href="/signup"><img src="/img/login-icon.png" alt="a login logo" class="icon margin-50"/></a>
+    <a href="/"><h1 class="font-light headings-font margin-50">MentorMonkey</h1></a>
+    {{#if logged_in}}
+      <a href="/profile_form">My Profile</a>
+      <a href="/" id="logout"><img src="/img/logout.png" alt="a logout logo" class="icon margin-50"/></a>
+      {{else}}
+        <a href="/login"><img src="/img/login.png" alt="a login logo" class="icon margin-50"/></a>
+      {{/if}}
   </nav>
   <main>
     <!-- Render the sub layout -->

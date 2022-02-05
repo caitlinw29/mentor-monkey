@@ -8,7 +8,7 @@
   --black: #000000;
 }
 
-/* font */
+/* font families */
 .headings-font {
   font-family: 'Roboto', sans-serif;
 }
@@ -17,7 +17,6 @@
 .font-light {
   color: var(--beige);
 }
-
 
 body {
   background-color: var(--beige); 
@@ -65,22 +64,28 @@ nav {
 } */
 
 /* images */
-img {
-  max-height: 300px;
+section .hero-image {
   width: 100%;
-  object-fit:cover;
+  object-fit: cover;  
+  opacity: 90%;
 }
+
+/* call-to-action text */
+.action {
+  text-shadow: 2px 1px 5px gray;
+}
+
+.action:hover {
+  opacity: 75%;
+  color: var(--maroon);
+}
+
 
 /* testimonial box */
 .text-center {
   margin-top: 25px; 
   margin-bottom: 25px;
   color: var(--dark-blue);
-}
-
-.text-center:hover {
-  color: var(--maroon);
-  cursor: pointer;
 }
 
 p.text-width {
@@ -96,7 +101,6 @@ p.text-width {
 }
 
 /* sign up form */
-
 form {
   margin-top: 30px;
   background-color: var(--mint-green);
