@@ -147,7 +147,23 @@ div.form-container {
   width: 40px; 
 }
 
-@media screen and (max-width: 810px) {   
+.log-hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 810px) {  
+  
+  h1 {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    height: 138px;
+    justify-content: space-evenly;
+  }
+
   div.hamburger {
     display: flex;
   }
@@ -159,6 +175,46 @@ div.form-container {
 
   img.icon.margin-50 {
     display: none;
+  }
+
+  .log-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex; 
+    flex-direction: row;
+    color: var(--maroon);
+    font-weight: bold;
+  }
+
+  .dashboard {
+    display: none;
+  }
+
+  .dashboard.active {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .log-hamburger {
+    display: none;
+  }
+
+  .log-hamburger.active {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .overlay {
+    background-color: var(--mint-green);
+    border-radius: 15px;
+    display: flex; 
+    flex-direction: row;
   }
 }
 
