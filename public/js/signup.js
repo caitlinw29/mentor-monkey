@@ -5,6 +5,13 @@ const signupForm = async (event) => {
   const username = document.querySelector('#user-signup').value.trim(); 
   const password = document.querySelector('#password-signup').value.trim();
   
+  // const rePassword = document.querySelector('#password-reenter').value.trim();
+  
+  // if (password !== rePassword) {
+  //   alert('Passwords do not match! Please re-enter your password');
+  //   document.location.replace
+  // }
+  
   if (username && password) {
       const response = await fetch('/api/users', {
           method: 'POST', 
@@ -15,7 +22,7 @@ const signupForm = async (event) => {
       // If successful, redirect the browser to the dashboard
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      alert('Username already exists!'); 
     }
   } 
   

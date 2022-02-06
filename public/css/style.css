@@ -61,6 +61,26 @@ nav {
 }
 
 
+/* carousel */
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+#quote {
+  height: 215px;
+}
+
+#testimonial-card {
+  height: 205px;
+}
+
+.bottom {
+  margin-top: -15px;
+  font-weight: bold;
+}
+
 /* we can add a footer later if we need to */
 /* footer {
   background-color: var(--dark-blue);
@@ -94,6 +114,8 @@ section .hero-image {
 
 p.text-width {
   margin: 25px;
+  width: 300px;
+  margin-left: 85px;
 }
 
 .card {
@@ -139,27 +161,85 @@ div.form-container {
 /* responsive hamburger button*/
 .hamburger {
   position: absolute;
-  top: 40px;
+  top: 25px;
   right: 40px;
   display: none;
   flex-direction: column;
   justify-content: space-between; 
-  width: 30px; 
-  height: 21px;
+  width: 40px; 
 }
 
-.hamburger .bar {
-  height: 3px; 
-  width: 100%;
-  border-radius: 10px;
+.log-hamburger {
+  display: none;
 }
 
-/* @media screen and (max-width: 810px) {   
-  a.hamburger {
+@media screen and (max-width: 810px) {  
+  
+  h1 {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    height: 138px;
+    justify-content: space-evenly;
+  }
+
+  div.hamburger {
     display: flex;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+    opacity: 80%;
   }
 
   img.icon.margin-50 {
     display: none;
   }
-} */
+
+  .log-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex; 
+    flex-direction: row;
+    color: var(--mint-green);
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  .nav-links.active:hover {
+    color: var(--beige);
+  }
+
+  .dashboard {
+    display: none;
+  }
+
+  .dashboard.active {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .log-hamburger {
+    display: none;
+  }
+
+  .log-hamburger.active {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .overlay {
+    border-radius: 15px;
+    display: flex; 
+    flex-direction: row;
+  }
+}
