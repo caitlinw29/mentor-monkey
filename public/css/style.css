@@ -249,8 +249,8 @@ div.form-container {
   display: none;
 }
 
-
-#chatform { 
+/* CHAT */
+.chatform { 
   background: rgba(0, 0, 0, 0.15); 
   padding: 0.25rem; 
   position: fixed;
@@ -262,14 +262,7 @@ div.form-container {
   backdrop-filter: blur(10px);
 }
 
-/* .message-container {
-  bottom: 20%; 
-  left: 20%; 
-  right: 20%;
-  border: solid greenyellow;
-} */
-
-#chatinput { 
+.chatinput { 
   border: none; 
   padding: 0 1rem; 
   flex-grow: 1; 
@@ -277,11 +270,11 @@ div.form-container {
   margin: 0.25rem; 
 }
 
-#chatinput:focus { 
+.chatinput:focus { 
   outline: none; 
 }
 
-#chatform > button { 
+.chatform > button { 
   background: var(--dark-blue);
   border: none;
   padding: 0 1rem; 
@@ -291,27 +284,25 @@ div.form-container {
   color: #fff; 
 }
 
-#chatmessages { 
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0; 
-  /* left: 0; 
-  right: 0;
-  border: solid hotpink; */
+#message-container {
+  max-width: 1200px;
+  width: 75%;
 }
 
-#chatmessages > li { 
-  padding: 0.5rem 1rem;
+#message-container div {
+  padding: 5px;
   background-color: #e9eeea
 }
 
-#chatmessages > li:nth-child(odd) {
-   background: white; 
+#message-container div:nth-child(2n) {
+  padding: 5px;
+  background-color: white;
 }
 
-.message-container {
-  max-width: 720px;
+#send-container {
+  width: 75%;
 }
+
 
 
 @media screen and (max-width: 810px) {  
