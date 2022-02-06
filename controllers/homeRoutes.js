@@ -17,7 +17,10 @@ router.get('/', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     //find all profiles where is_mentor is true to display the profiles of those who wish to be on the current mentor list
-    const profileData = await Profile.findAll({ where: { is_mentor: true } });
+    const profileData = await Profile.findAll({
+      subQuery: false,
+      where: { is_mentor: true } 
+    });
 
     const mentorProfiles = profileData.map((profile) => profile.get({ plain: true }));
 
