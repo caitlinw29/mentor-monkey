@@ -4,8 +4,13 @@ const signupForm = async (event) => {
 
   const username = document.querySelector('#user-signup').value.trim(); 
   const password = document.querySelector('#password-signup').value.trim();
-
-  const rePassword = document.querySelector('#password-reenter').value.trim();
+  
+  // const rePassword = document.querySelector('#password-reenter').value.trim();
+  
+  // if (password !== rePassword) {
+  //   alert('Passwords do not match! Please re-enter your password');
+  //   document.location.replace
+  // }
   
   if (username && password) {
       const response = await fetch('/api/users', {
@@ -18,15 +23,8 @@ const signupForm = async (event) => {
       document.location.replace('/dashboard');
     } else {
       alert('Username already exists!'); 
-      // steph note: maybe there is a way to insert this message into signup.handlebars using res.render, but i couldn't get it to work...
     }
   } 
-
-  if (password !== rePassword) {
-    alert('Passwords do not match! Please re-enter your password');
-    document.location.replace
-  }
-  
 };
 
 //function runs when form is submitted

@@ -13,11 +13,10 @@ const logout = async () => {
     headers: { 'Content-Type': 'application/json' },
   });
 
-  // Quick solution for MVP
   if (response.ok) {
     document.location.replace('/');
-  } else { 
-    document.location.replace('/');
+  } else {
+    alert(response.statusText);
   }
 };
 

@@ -1,29 +1,34 @@
-    
-    <div class = "mx-auto row col-12">
-        <div class="form-container">
-        <h3 class="text-center">Create a Profile: <a href "/profile_form"></a></h3>
+<!--Form to create a profile-->
+<div class="mx-auto row col-12">
+    <div class="form-container">
+        <h3 class="text-center">Create a Profile:</h3>
         
-        <form class="mx-auto new-profile-form">
-            <div class = "form-container">
-            <div class="row">
-                <label for="user-name" class="col-form-label">What would you like to be called?</label>
+        <form class="mx-auto form new-profile-form">
+            <div class="form-container">
+                <div class="row">
+                    <label for="user-name" class="col-form-label">What would you like to be called?</label>
+                </div>
+                <div class="col-md-12">    
+                    <input type="text" id="user-name" name="user-name" style="width:80%" placeholder="Name"></input>
+                </div>
+                <div class="row">
+                    <label for="user-language" class="col-form-label">What languages or tools would you feel comfortable mentoring someone in?</label>
+                </div>
+                <div class="col-md-12">    
+                    <input type="text" id="user-language" name="user-language" style="width:80%" placeholder="None, JavaScript, Python, Github, etc."></input>
+                </div>
+                <div class="row">
+                    <label for="user-about" class="col-form-label">About:</label>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="user-about" name="user-about" style="width:80%" placeholder="Tell us about yourself!"></input>
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn button w-75">Submit</button>
+                </div>
             </div>
-            <div class="col-md-12">
-                <input type="text" id="user-name" name="user-name" placeholder="Name"></input>
-            </div>
-            <div class = "row">
-                <label for="user-language" class="col-form-label">What languages do you know?</label>
-            </div>
-            <div class="col-md-12">
-                <input type="text" id="user-language" name="user-language" placeholder="JavaScript, Python, etc."></input>
-            </div>
-            <div class = "row">
-                <label for="user-about" class="col-form-label">Tell us about yourself.</label>
-            </div>
-            <div class="col-md-12">    
-                <input type="text" id="user-about" name="user-about" placeholder="About Me"></input>
-                <button type="submit" class="btn button">Submit</button>
-           </div>
-           </div>
-       </form>
- </div>
+        </form>
+    </div>
+</div>
+
+<script src="/js/profile.js"></script>
