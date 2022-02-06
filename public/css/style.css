@@ -158,6 +158,35 @@ div.form-container {
   margin-top: 25px;
 }
 
+/* dashboard buttons */
+.blue-button {
+  background-color: var(--dark-blue);
+  color: var(--beige);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 70%;
+  box-shadow: 2px 2px 5px grey;
+}
+
+.maroon-button {
+  background-color: var(--maroon);
+  color: var(--beige);
+  width: 70%;
+  box-shadow: 2px 2px 5px grey;
+}
+
+.blue-button:hover {
+  background-color: var(--dark-blue);
+  color: var(--beige);
+  opacity: 90%;
+}
+
+.maroon-button:hover {
+  background-color: var(--maroon);
+  color: var(--beige);
+  opacity: 90%;
+}
+
 /* responsive hamburger button*/
 .hamburger {
   position: absolute;
