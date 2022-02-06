@@ -190,6 +190,14 @@ div.form-container {
   height: 400px;
 }
 
+.card-mentor {
+  margin-top: 25px;
+  text-align: left;
+  background-color: var(--mint-green);
+  color: var(--dark-blue);
+  border-radius: 20px;
+}
+
 /* responsive hamburger button*/
 .hamburger {
   position: absolute;
