@@ -7,29 +7,35 @@
 
 <!--List of mentors-->
 <div class="container">
-  <br>
+  <div class="mt-4 ml-4">
     <h4 class="color-light ml-2">Choose a mentor:</h4>
+  <div>
 
 <!--cards for each mentor-->
   <div class="card-mentor border-0 mb-4" style="width: 20rem;">
     <div class="card-body">
       <h5 class="card-title mb-4">Name Goes Here {{name}}</h5>
-      <h6 class="card-subtitle mb-2">About Me:</h6>
-      <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <h6 class="card-subtitle mb-2">My Skills:{{languages}}</h6>
+      <h6 class="card-subtitle mb-2 maroon">About Me:</h6>
+      <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.{{about}}</p>
+      <h6 class="card-subtitle mb-2 maroon">My Skills:</h6>
+      <div class="skills">
+        {{languages}} 
+        <p class="lang">Javascript</p> 
+        <p class="lang">node.js</p> 
+        <p class="lang">Handebars</p>
+      </div>
+      <div class="align-content-center">
+        <button class="btn maroon-button mt-4" data-id="{{id}}">Select Mentor</button>
+      </div>
     </div>
   </div>
 
 
 {{#each mentorProfiles as |profile|}}
 
-        <p>{{about}}</p>
 
-        
-      </div>
-    </div>
-    <div class="col-md-4">
-      <button class="btn btn-primary" data-id="{{id}}">Choose this mentor</button>
+
+
     </div>
   </div>
 {{/each}}

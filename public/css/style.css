@@ -13,6 +13,10 @@
   color: var(--beige);
 }
 
+.maroon {
+  color: var(--maroon);
+}
+
 body {
   background-color: var(--beige); 
   font-family: 'Roboto', sans-serif;
@@ -187,7 +191,8 @@ div.form-container {
 .container {
   background-color: var(--dark-blue);
   border-radius: 20px;
-  height: 400px;
+  display: flex;
+  position: relative;
 }
 
 .card-mentor {
@@ -196,6 +201,17 @@ div.form-container {
   background-color: var(--mint-green);
   color: var(--dark-blue);
   border-radius: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.lang {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 2px;
 }
 
 /* responsive hamburger button*/
