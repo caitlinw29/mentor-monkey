@@ -8,18 +8,22 @@
   --black: #000000;
 }
 
-/* font families */
-.headings-font {
-  font-family: 'Roboto', sans-serif;
+/* font colors */
+.beige {
+  color: var(--beige);
 }
 
-/* font colors */
-.color-light {
-  color: var(--beige);
+.maroon {
+  color: var(--maroon);
+}
+
+.mint-green {
+  color: var(--mint-green);
 }
 
 body {
   background-color: var(--beige); 
+  font-family: 'Roboto', sans-serif;
 }
 
 /* header and footer */
@@ -156,6 +160,78 @@ div.form-container {
 
 .user-type {
   margin-top: 25px;
+}
+
+/* dashboard buttons */
+.blue-button {
+  background-color: var(--dark-blue);
+  color: var(--beige);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 70%;
+  box-shadow: 2px 2px 5px grey;
+}
+
+.maroon-button {
+  background-color: var(--maroon);
+  color: var(--beige);
+  width: 70%;
+  box-shadow: 2px 2px 5px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-button:hover {
+  background-color: var(--dark-blue);
+  color: var(--beige);
+  opacity: 90%;
+}
+
+.maroon-button:hover {
+  background-color: var(--maroon);
+  color: var(--beige);
+  opacity: 90%;
+}
+
+/* other dashboard features */
+.container {
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+}
+
+.card-mentor {
+  margin-top: 25px;
+  text-align: left;
+  background-color: var(--mint-green);
+  color: var(--dark-blue);
+  border-radius: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.lang {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 2px;
+}
+
+.center-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.card-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* responsive hamburger button*/

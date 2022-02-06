@@ -1,25 +1,71 @@
-<!--Buttons to add and remove from mentor list-->
-<btn class="btn btn-info btn-block" id="mentorBtn">Add me to the mentor list!</btn>
+<!--ready to mentor container-->
+<div class="card border-0 mx-auto mb-4" style="width: 30rem;">
+  <p class="center-text mb-0 mt-4">Ready to mentor?</p>
+  <h3 class="mt-1">Update your status</h3>
+  <!--Buttons to add and remove from mentor list-->
+  <button type="submit" class="mx-auto btn blue-button" id="mentorBtn">Add me to the mentor list!</button>
+  <button type="submit" class="mx-auto btn maroon-button mb-4" id="removeMentorBtn">Stop Mentoring</button>
+ </div>
 
-<btn class="btn btn-danger btn-block" id="removeMentorBtn">Stop Mentoring</btn>
-
-<!--List of mentors-->
-<h4>Choose a mentor:</h4>
-{{#each mentorProfiles as |profile|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
-      <h5>{{name}}</h5>
+<!--cards for mentor's available container-->
+<div class="container">
+  <div class="card-block mt-4 ml-4">
+    <div class="col">
+      <p class="center-text mint-green">Need help with your code?</p>
+      <h4 class="center-text mint-green">Choose a mentor</h4>
     </div>
-    <div class="col-md-8">
-      <p>About Me:</p>
-      <p>{{about}}</p>
-      <p>My Skills:</p>
-      <p>{{languages}}</p>
+  <div>
+  
+  <!--cards for each mentor-->
+  <!--steph note: placeholder text should be removed when ready to test with actual data-->
+  {{#each mentorProfiles as |profile|}}
+  <div class="card-block">
+    <div class="card-mentor border-0 mb-4" style="width: 20rem;">
+      <div class="card-body">
+        <h5 class="card-title mb-4">Name Goes Here{{name}}</h5>
+        <h6 class="card-subtitle mb-2 maroon">About Me:</h6>
+        <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.{{about}}</p>
+        <h6 class="card-subtitle mb-2 maroon">My Skills:</h6>
+        <div class="skills">
+          <p class="lang">Javascript</p> 
+          <p class="lang">node.js</p> 
+          <p class="lang">Handebars</p>
+          <p class="lang">{{languages}}</p>
+        </div>
+        <hr></hr>
+        <button class="btn maroon-button mt-4 mx-auto" data-id="{{id}}">Select Mentor</button>
+      </div>
+  </div>
+</div>
+{{/each}}
+</div>
+
+<script src="./js/dashboard.js"></script>
+
+
+
+
+{{!-- this is Caitlin's code that i couldn't get to work with new UI elements...commenting it out for now --}}
+  {{!-- <h4 class="beige ml-2">Choose a mentor:</h4>
+  <div class="card border-0 mb-4" style="width: 20rem;">
+    example {{#each mentorProfiles as |profile|}}
+  
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h5>name goes here {{name}}</h5>
+      </div>
+      <div class="col-md-8">
+        <p>About Me:</p>
+        <p>{{about}}</p>
+        <p>My Skills:</p>
+        <p>{{languages}}</p>
+      </div>
     </div>
     <div class="col-md-4">
       <button id="chooseMentor" class="btn btn-primary" data-id="{{id}}">Choose this mentor</button>
     </div>
   </div>
 {{/each}}
-
-<script src="./js/dashboard.js"></script>
+</div>
+</div>
+</div> --}}
