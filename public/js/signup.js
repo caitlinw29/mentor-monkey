@@ -25,7 +25,6 @@ const signupForm = async (event) => {
       alert('Username already exists!'); 
     }
   } 
-  
 };
 
 //function runs when form is submitted
