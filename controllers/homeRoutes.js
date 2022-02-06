@@ -36,7 +36,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
 //route to render the profile form 
 router.get('/profile_form', withAuth, async (req, res) => {
   try {
-    res.render('profile_form');
+    res.render('profile_form', {
+      logged_in: true
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -46,7 +48,9 @@ router.get('/profile_form', withAuth, async (req, res) => {
 router.get('/chat', async (req, res) => {
   console.log('route is made')
   try{
-    res.render('chat');
+    res.render('chat', {
+      logged_in: true
+    });
   } catch (err) {
     res.status(500).json(err);
   }

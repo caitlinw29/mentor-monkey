@@ -1,13 +1,12 @@
-    <div class="container message-container">
+ <div class="container message-container">
         <div class="row">
             <div class="col">
-                <ul id="chat-messages"></ul>
-                    <form id="chat-form" action="">
-                    <input id="chat-input" autocomplete="off" /><button>Send</button>
+                <ul id="chatmessages"></ul>
+                    <form id="chatform" action="">
+                    <input id="chatinput" autocomplete="off" /><button>Send</button>
                     </form>
             </div>
         </div>
     </div>
-    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
-
-<script src="./js/chat.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/chat.js"></script>

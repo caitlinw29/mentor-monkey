@@ -17,7 +17,6 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-
 const hbs = exphbs.create({ helpers });
 
 const sess = {
@@ -57,5 +56,8 @@ io.on('connection', (socket) => {
 });
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening http://localhost:3001'));
+  // USE SERVER FOR CHAT - we connect app to server above
+  server.listen(PORT, () => {
+    console.log('http://localhost:3001');
+  });
 });
