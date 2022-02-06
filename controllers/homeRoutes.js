@@ -44,11 +44,13 @@ router.get('/profile_form', withAuth, async (req, res) => {
 
 //Chat route
 router.get('/chat', async (req, res) => {
+  console.log('route is made')
   try{
     res.render('chat');
   } catch (err) {
     res.status(500).json(err);
   }
+  console.log('TRIES ROUTE')
 });
 
 //route to render the signup form 
