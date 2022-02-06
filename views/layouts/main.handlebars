@@ -1,61 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MentorMonkey</title>
-  <link rel="icon" type="image/png" href="/img/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorMonkey</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
 
-<body>
-  <div class="hamburger"> 
-    <img src="/img/hamburger.png" alt="an image showing three lines to represent a hamburger menu"class="ham-menu"/>
-  </div>
-  <nav>
-    <a href="/"><h1 class="color-light headings-font margin-50">MentorMonkey</h1></a>
-    <!--Show nav links depending on if the user is logged in -->
-    {{#if logged_in}}
-      <div class="overlay">
-        <a class="headings-font nav-links" href="/profile_form">My Profile</a>
-        <a class="headings-font nav-links dashboard" href="/dashboard">My Dashboard</a>
-
-        {{!-- this is only activated with hamburger --}}
-         <a class="headings-font nav-links log-hamburger" href="/dashboard">Log out</a>
-      
-      <a href="/" id="logout"><img src="/img/logout.png" alt="a logout logo" class="icon margin-50"/></a>
-      {{else}}
-        <a href="/login"><img src="/img/login.png" alt="a login logo" class="icon margin-50"/></a>
-
-        {{!-- this is only activated with hamburger --}}
-         <a class="headings-font nav-links log-hamburger" href="/dashboard">Log in</a>
-
+  <body>
+    <nav>
+      <a href="/"><h1 class="color-light headings-font margin-50">MentorMonkey</h1></a>
+      <!--Show nav links depending on if the user is logged in -->
+      {{#if logged_in}}
+        <div class="display-flex justify-flex-end">
+          <a class="headings-font nav-links" href="/profile_form">My Profile</a>
+          <a class="headings-font nav-links" href="/dashboard">My Dashboard</a>
+        
+          <a href="/" id="logout"><img src="/img/logout.png" alt="a logout logo" class="icon margin-50"/></a>
+          {{else}}
+          <a href="/login"><img src="/img/login.png" alt="a login logo" class="icon margin-50"/></a>
       {{/if}}
-      </div>
-  </nav>
+        </div>
+    </nav>
 
-  <main>
-    <!-- Render the sub layout -->
-    {{{ body }}}
-  </main>
-    
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-  <script src="/js/hamburger.js"></script>
-  <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+    <main>
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+      
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
   </body>
 </html>
 

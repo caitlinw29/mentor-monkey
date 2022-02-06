@@ -3,32 +3,33 @@
 
 <form class="mx-auto row signup-form">
     <div class="form-container">
-    <div class="form-group row">
-        <label for="user-signup" class="col-form-label">Username</label>
-    </div>
-    <div class="col-sm-8">
-        <input type="username" class="form-control" id="user-signup" placeholder="Username">
-    </div>
-
-    <div class="form-group row">
-        <label for="password-signup" class="col-form-label">Password</label>
-    </div>    
-    <div class="col-sm-8">
-        <input type="password" class="form-control" id="password-signup" placeholder="Password">
-    </div>
-
-    <div class="form-group row">
-        <label for="password-signup" class="col-form-label">Re-enter password</label>
-    </div>    
-    <div class="col-sm-8">
-        <input type="password" class="form-control" id="password-reenter" placeholder="Password">
-    </div>
-
-    <div class="form-group row">
-        <div class="col-sm-10">
-        <button type="submit" class="btn button" id="sign-up-button">Sign up</button>
+        <div class="form-group row">
+            <label for="user-signup" class="col-form-label">Username</label>
         </div>
-    </div>
+        <div class="col-sm-8">
+            <input type="username" class="form-control" id="user-signup" placeholder="Username">
+        </div>
+
+        <div class="form-group row">
+            <label for="password-signup" class="col-form-label">Password</label>
+        </div>    
+        <div class="col-sm-8">
+            <input type="password" class="form-control" id="password-signup" placeholder="Password">
+        </div>
+
+        {{!-- Password check currently broken --}}
+        {{!-- <div class="form-group row">
+            <label for="password-signup" class="col-form-label">Re-enter password</label>
+        </div>    
+        <div class="col-sm-8">
+            <input type="password" class="form-control" id="password-reenter" placeholder="Password">
+        </div> --}}
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn button" id="sign-up-button">Sign up</button>
+            </div>
+        </div>
     </div>
 </form>
 
