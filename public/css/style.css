@@ -249,7 +249,11 @@ div.form-container {
   display: none;
 }
 
+<<<<<<< HEAD
 /* chat stylings */
+=======
+/* CHAT */
+>>>>>>> aa45240c8f3c0ea499f3c04c9f54acf51fb1659a
 .chatform { 
   background: rgba(0, 0, 0, 0.15); 
   padding: 0.25rem; 
@@ -277,39 +281,14 @@ div.form-container {
 }
 
 .chatform > button { 
-  background-color: var(--dark-blue);
-  color: var(--beige);
-  width: 8%;
-  height: 35px;
-  box-shadow: 1px 2px 2px grey;
-  border-radius: 15px;
-  margin-top: 2px;
-  font-size: 19px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: var(--dark-blue);
+  border: none;
+  padding: 0 1rem; 
+  margin: 0.25rem; 
+  border-radius: 3px; 
+  outline: none; 
+  color: #fff; 
 }
-
-.chat-container {
-  background-color: var(--mint-green);
-}
-
-/* 
-.chatmessages { 
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0;  */
-  /* left: 0; 
-  right: 0;
-  border: solid hotpink; */
-/* }
-
-.chatmessages > li { 
-  padding: 0.5rem 1rem;
-  background-color: #e9eeea
-}
-
-.chatmessages > li:nth-child(odd) {
-   background: white; 
-} */
 
 #message-container {
   max-width: 1200px;
@@ -329,6 +308,11 @@ div.form-container {
 #send-container {
   width: 75%;
 }
+
+#send-container {
+  width: 75%;
+}
+
 
 
 

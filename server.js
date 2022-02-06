@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3001;
 // socket.io
 const http = require('http');
 const server = http.createServer(app);
-const { Server } = require("socket.io");
+const { Server } = require('socket.io');
 const io = new Server(server);
 
 const hbs = exphbs.create({ helpers });
@@ -25,8 +25,8 @@ const sess = {
   resave: false,
   saveUninitialized: false,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -40,18 +40,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-// socket.io 
+// socket.io connection
+
 io.on('connection', (socket) => {
-  console.log('socket.io connection MNADEASDFASDF')
-  socket.on('chat message', (msg) => {
-    // console.log('message: ' + msg);
-    console.log('message: ' + msg);
-  });
-});
-io.on('connection', (socket) => {
-  console.log('socket.io connection made')
-  socket.on('chat message', (msg) => {
-    io.emit('chat message', msg);
+  socket.on('send-chat-message', (message) => {
+    //broadcast will send to all users except current user
+    socket.broadcast.emit('chat-message', message);
   });
 });
 
