@@ -249,6 +249,71 @@ div.form-container {
   display: none;
 }
 
+
+#chatform { 
+  background: rgba(0, 0, 0, 0.15); 
+  padding: 0.25rem; 
+  position: fixed;
+  bottom: 0; 
+  min-width: 720px;
+  display: flex;
+  max-height: 3rem; 
+  box-sizing: border-box; 
+  backdrop-filter: blur(10px);
+}
+
+/* .message-container {
+  bottom: 20%; 
+  left: 20%; 
+  right: 20%;
+  border: solid greenyellow;
+} */
+
+#chatinput { 
+  border: none; 
+  padding: 0 1rem; 
+  flex-grow: 1; 
+  border-radius: 2rem; 
+  margin: 0.25rem; 
+}
+
+#chatinput:focus { 
+  outline: none; 
+}
+
+#chatform > button { 
+  background: var(--dark-blue);
+  border: none;
+  padding: 0 1rem; 
+  margin: 0.25rem; 
+  border-radius: 3px; 
+  outline: none; 
+  color: #fff; 
+}
+
+#chatmessages { 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  /* left: 0; 
+  right: 0;
+  border: solid hotpink; */
+}
+
+#chatmessages > li { 
+  padding: 0.5rem 1rem;
+  background-color: #e9eeea
+}
+
+#chatmessages > li:nth-child(odd) {
+   background: white; 
+}
+
+.message-container {
+  max-width: 720px;
+}
+
+
 @media screen and (max-width: 810px) {  
   
   h1 {

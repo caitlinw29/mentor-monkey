@@ -33,6 +33,12 @@ const removeMentor = async () => {
   }
 }
 
+//view chat page on button click - need better routing system but works for visual purposes until chat functionality is added fully
+const chooseMentor = async () => {
+  document.location.replace('/chat');
+}
+
 //user clicks buttons to add and remove their profile from mentor list
 document.getElementById('mentorBtn').addEventListener('click', addMentor);
 document.getElementById('removeMentorBtn').addEventListener('click', removeMentor);
+document.getElementById('chooseMentor').addEventListener('click', chooseMentor);

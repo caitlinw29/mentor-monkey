@@ -11,12 +11,11 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// // socket.io
-// const http = require('http');
-// const server = http.createServer(app);
-// const { Server } = require("socket.io");
-// const io = new Server(server);
-
+// socket.io
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
 
 const hbs = exphbs.create({ helpers });
 
@@ -42,17 +41,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // socket.io 
-// io.on('connection', (socket) => {
-//   socket.on('chat message', (msg) => {
-//     // console.log('message: ' + msg);
-//   });
-// });
-// io.on('connection', (socket) => {
-//   socket.on('chat message', (msg) => {
-//     io.emit('chat message', msg);
-//   });
-// });
+io.on('connection', (socket) => {
+  console.log('socket.io connection MNADEASDFASDF')
+  socket.on('chat message', (msg) => {
+    // console.log('message: ' + msg);
+    console.log('message: ' + msg);
+  });
+});
+io.on('connection', (socket) => {
+  console.log('socket.io connection made')
+  socket.on('chat message', (msg) => {
+    io.emit('chat message', msg);
+  });
+});
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  // USE SERVER FOR CHAT - we connect app to server above
+  server.listen(PORT, () => {
+    console.log('http://localhost:3001');
+  });
 });
