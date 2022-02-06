@@ -1,33 +1,29 @@
-<!--Form to create a profile-->
-<div class = "row col-md-3">
-    <div id="profile-container">
-        <h3>Create a Profile:</h3>
+    
+    <div class = "mx-auto row col-12">
+        <div class="form-container">
+        <h3 class="text-center">Create a Profile: <a href "/profile_form"></a></h3>
         
-        <form class="form new-profile-form">
-            <div class = "form-profile row">
+        <form class="mx-auto new-profile-form">
+            <div class = "form-container">
+            <div class="row">
                 <label for="user-name" class="col-form-label">What would you like to be called?</label>
             </div>
-            <div class="col-sm-8">    
+            <div class="col-md-12">
                 <input type="text" id="user-name" name="user-name" placeholder="Name"></input>
             </div>
-            <div class = "form-profile row">
-                <label for="user-language">What languages or tools would you feel comfortable mentoring someone in?</label>
+            <div class = "row">
+                <label for="user-language" class="col-form-label">What languages do you know?</label>
             </div>
-            <div class="col-sm-8">    
-                <input type="text" id="user-language" name="user-language" placeholder="None, JavaScript, Python, Github, etc."></input>
+            <div class="col-md-12">
+                <input type="text" id="user-language" name="user-language" placeholder="JavaScript, Python, etc."></input>
             </div>
-            <div class = "form-profile row">
-                <label for="user-about">About:</label>
+            <div class = "row">
+                <label for="user-about" class="col-form-label">Tell us about yourself.</label>
             </div>
-            <div class="col-sm-8">
-                <input type="text" id="user-about" name="user-about" placeholder="Are you a student, manager, developer? Do you love UI/UX? Tell everyone a bit about who you are, it will help you get matched with a mentor or mentee!"></input>
-            </div>
-            <div class = "form-profile row">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-    
-        </form>
-    </div>
-</div>
-
-<script src="/js/profile.js"></script>
+            <div class="col-md-12">    
+                <input type="text" id="user-about" name="user-about" placeholder="About Me"></input>
+                <button type="submit" class="btn button">Submit</button>
+           </div>
+           </div>
+       </form>
+ </div>
