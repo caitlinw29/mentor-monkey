@@ -61,6 +61,26 @@ nav {
 }
 
 
+/* carousel */
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+#quote {
+  height: 215px;
+}
+
+#testimonial-card {
+  height: 205px;
+}
+
+.bottom {
+  margin-top: -15px;
+  font-weight: bold;
+}
+
 /* we can add a footer later if we need to */
 /* footer {
   background-color: var(--dark-blue);
@@ -94,6 +114,8 @@ section .hero-image {
 
 p.text-width {
   margin: 25px;
+  width: 300px;
+  margin-left: 85px;
 }
 
 .card {
@@ -191,7 +213,10 @@ div.form-container {
     color: var(--mint-green);
     font-weight: bold;
     margin-top: 0;
-    text-shadow: 10px 10px 10px var(--maroon);
+  }
+
+  .nav-links.active:hover {
+    color: var(--beige);
   }
 
   .dashboard {
