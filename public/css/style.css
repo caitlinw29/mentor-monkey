@@ -8,11 +8,6 @@
   --black: #000000;
 }
 
-/* font families */
-.headings-font {
-  font-family: 'Roboto', sans-serif;
-}
-
 /* font colors */
 .color-light {
   color: var(--beige);
@@ -20,6 +15,7 @@
 
 body {
   background-color: var(--beige); 
+  font-family: 'Roboto', sans-serif;
 }
 
 /* header and footer */
@@ -185,6 +181,13 @@ div.form-container {
   background-color: var(--maroon);
   color: var(--beige);
   opacity: 90%;
+}
+
+/* other dashboard features */
+.container {
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+  height: 400px;
 }
 
 /* responsive hamburger button*/

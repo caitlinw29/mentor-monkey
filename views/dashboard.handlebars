@@ -5,10 +5,9 @@
   <button type="submit" class="mx-auto btn maroon-button mb-4" id="removeMentorBtn">Stop Mentoring</button>
  </div>
 
-
-
 <!--List of mentors-->
-<h4>Choose a mentor:</h4>
+<div class="container">
+<h4 class="headings-font color-light">Choose a mentor:</h4>
 {{#each mentorProfiles as |profile|}}
   <div class="row mb-2">
     <div class="col-md-8">
@@ -25,5 +24,7 @@
     </div>
   </div>
 {{/each}}
+
+</div>
 
 <script src="./js/dashboard.js"></script>
