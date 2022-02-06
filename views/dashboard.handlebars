@@ -17,38 +17,35 @@
   <div>
   
   <!--cards for each mentor-->
+  <!--steph note: placeholder text should be removed when ready to test with actual data-->
+  {{#each mentorProfiles as |profile|}}
   <div class="card-block">
-  <div class="card-mentor border-0 mb-4" style="width: 20rem;">
-    <div class="card-body">
-      <h5 class="card-title mb-4">Name Goes Here {{name}}</h5>
-      <h6 class="card-subtitle mb-2 maroon">About Me:</h6>
-      <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.{{about}}</p>
-      <h6 class="card-subtitle mb-2 maroon">My Skills:</h6>
-      <div class="skills">
-        {{languages}} 
-        <p class="lang">Javascript</p> 
-        <p class="lang">node.js</p> 
-        <p class="lang">Handebars</p>
+    <div class="card-mentor border-0 mb-4" style="width: 20rem;">
+      <div class="card-body">
+        <h5 class="card-title mb-4">Name Goes Here{{name}}</h5>
+        <h6 class="card-subtitle mb-2 maroon">About Me:</h6>
+        <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.{{about}}</p>
+        <h6 class="card-subtitle mb-2 maroon">My Skills:</h6>
+        <div class="skills">
+          <p class="lang">Javascript</p> 
+          <p class="lang">node.js</p> 
+          <p class="lang">Handebars</p>
+          <p class="lang">{{languages}}</p>
+        </div>
+        <hr></hr>
+        <button class="btn maroon-button mt-4 mx-auto" data-id="{{id}}">Select Mentor</button>
       </div>
-      <hr></hr>
-      <button class="btn maroon-button mt-4 mx-auto" data-id="{{id}}">Select Mentor</button>
-    </div>
-    </div>
-
+  </div>
 </div>
-
-{{#each mentorProfiles as |profile|}}
 {{/each}}
-
-
-
+</div>
 
 <script src="./js/dashboard.js"></script>
 
 
 
 
-{{!-- this is the older code that i couldn't get to show up...commenting it out for now --}}
+{{!-- this is Caitlin's code that i couldn't get to work with new UI elements...commenting it out for now --}}
   {{!-- <h4 class="beige ml-2">Choose a mentor:</h4>
   <div class="card border-0 mb-4" style="width: 20rem;">
     example {{#each mentorProfiles as |profile|}}
