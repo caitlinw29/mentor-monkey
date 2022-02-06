@@ -9,12 +9,16 @@
 }
 
 /* font colors */
-.color-light {
+.beige {
   color: var(--beige);
 }
 
 .maroon {
   color: var(--maroon);
+}
+
+.mint-green {
+  color: var(--mint-green);
 }
 
 body {
@@ -173,6 +177,9 @@ div.form-container {
   color: var(--beige);
   width: 70%;
   box-shadow: 2px 2px 5px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blue-button:hover {
@@ -212,6 +219,19 @@ div.form-container {
   font-size: 16px;
   margin-left: 10px;
   margin-bottom: 2px;
+}
+
+.center-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.card-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* responsive hamburger button*/
