@@ -30,7 +30,7 @@
           <p class="lang">{{languages}}</p>
         </div>
         <hr></hr>
-        <button class="btn maroon-button mt-4 mx-auto" data-id="{{id}}">Select Mentor</button>
+        <button id="chooseMentor" class="btn maroon-button mt-4 mx-auto" data-id="{{id}}">Select Mentor</button>
       </div>
   </div>
 </div>
@@ -38,31 +38,3 @@
 </div>
 
 <script src="./js/dashboard.js"></script>
-
-
-
-
-{{!-- this is Caitlin's code that i couldn't get to work with new UI elements...commenting it out for now --}}
-  {{!-- <h4 class="beige ml-2">Choose a mentor:</h4>
-  <div class="card border-0 mb-4" style="width: 20rem;">
-    example {{#each mentorProfiles as |profile|}}
-  
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h5>name goes here {{name}}</h5>
-      </div>
-      <div class="col-md-8">
-        <p>About Me:</p>
-        <p>{{about}}</p>
-        <p>My Skills:</p>
-        <p>{{languages}}</p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <button id="chooseMentor" class="btn btn-primary" data-id="{{id}}">Choose this mentor</button>
-    </div>
-  </div>
-{{/each}}
-</div>
-</div>
-</div> --}}
