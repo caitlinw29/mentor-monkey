@@ -178,10 +178,10 @@ div.form-container {
   background: rgba(0, 0, 0, 0.15); 
   padding: 0.25rem; 
   position: fixed;
-  bottom: 0; 
+  bottom: 20px; 
   min-width: 720px;
   display: flex;
-  max-height: 3rem; 
+  min-height: 3rem; 
   box-sizing: border-box; 
   backdrop-filter: blur(10px);
 }

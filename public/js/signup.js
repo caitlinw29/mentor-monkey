@@ -20,7 +20,7 @@ const signupForm = async (event) => {
       });
     if (response.ok) {
       // If successful, redirect the browser to the dashboard
-      document.location.replace('/dashboard');
+      document.location.replace('/profile_form');
     } else {
       alert('Username already exists!'); 
     }

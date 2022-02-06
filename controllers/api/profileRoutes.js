@@ -13,10 +13,9 @@ router.post('/', withAuth, async (req, res) => {
       languages: req.body.languages,
       is_mentor: false,
       user_id: req.session.user_id,
+      has_profile: true
     });
-    req.session.save(() => {
-      req.session.has_profile = true;
-    })
+
     res.status(200).json(newProfile);
   } catch (err) {
      res.status(400).json(err);

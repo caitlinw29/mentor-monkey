@@ -11,6 +11,7 @@ router.post('/', async (req, res) => {
     const userData = await User.create(newUser);
     //session state is saved as being logged in
     req.session.save(() => {
+      req.session.user_id = userData.id
       req.session.logged_in = true;
 
     res.status(200).json(userData); 
