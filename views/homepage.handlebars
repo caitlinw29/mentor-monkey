@@ -3,10 +3,39 @@
 
 <a href="/signup"><h2 class="text-center action">Sign up now</h2></a>
 
-<div class="card border-0 mx-auto" style="width: 30rem;">
-    <p class="text-width">
-        "MentorMonkey is great! I got stuck on a coding assignment for my bootcamp and was able to get help right away." 
-    <br><br>- Steph, Atlanta, GA</br>
-    </p>
+{{!-- testimonial carousel --}}
+<div id="quote" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#quote" data-slide-to="0" class="active"></li>
+    <li data-target="#quote" data-slide-to="1"></li>
+    <li data-target="#quote" data-slide-to="2"></li>
+  </ul>
+
+<div class="card border-0 mx-auto" style="width: 30rem;" id="testimonial-card">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <p class="text-width">
+        "I love that I can volunteer as a mentor on a flexible schedule. I love helping people, but I can't always commit to a regular time. This site solves that problem!"
+       <div class="bottom">- Caitlin, Suwanee, GA</div></p>
+    </div>
+    <div class="carousel-item">
+        <p class="text-width">
+        "MentorMonkey is great! I got stuck on a coding assignment for my bootcamp and was able to get help right away."
+        <div class="bottom">- Steph, Atlanta, GA</div></p>
+    </div>
+    <div class="carousel-item">
+        <p class="text-width">
+        "My favorite thing about mentorMonkey is the community. I've made so many friends because of our shared interest in coding!"
+       <div class="bottom">- Alise, Atlanta, GA</div></p>
+        </p>
+    </div>
+  </div>
+
+  <a class="carousel-control-prev" href="#quote" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#quote" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
 </div>
-</section>
+</div>
