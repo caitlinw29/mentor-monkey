@@ -10,7 +10,7 @@ socket.on('chat-message', data => {
 });
 
 messageForm.addEventListener('submit', e => {
-  e.preventDefault;
+  e.preventDefault();
   //take in the user messsage from the form and send it with socket.emit to server.js
   const message = messageInput.value;
   socket.emit('send-chat-message', message);
