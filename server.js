@@ -43,16 +43,19 @@ app.use(routes);
 
 // socket.io 
 io.on('connection', (socket) => {
+  console.log('socket.io connection MNADEASDFASDF')
   socket.on('chat message', (msg) => {
     // console.log('message: ' + msg);
+    console.log('message: ' + msg);
   });
 });
 io.on('connection', (socket) => {
+  console.log('socket.io connection made')
   socket.on('chat message', (msg) => {
     io.emit('chat message', msg);
   });
 });
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening http://localhost:3001'));
 });
