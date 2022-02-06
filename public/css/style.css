@@ -188,8 +188,10 @@ div.form-container {
   .nav-links.active {
     display: flex; 
     flex-direction: row;
-    color: var(--maroon);
+    color: var(--mint-green);
     font-weight: bold;
+    margin-top: 0;
+    text-shadow: 10px 10px 10px var(--maroon);
   }
 
   .dashboard {
@@ -211,7 +213,6 @@ div.form-container {
   }
 
   .overlay {
-    background-color: var(--mint-green);
     border-radius: 15px;
     display: flex; 
     flex-direction: row;
