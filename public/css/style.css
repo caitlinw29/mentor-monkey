@@ -195,7 +195,7 @@ div.form-container {
 }
 
 /* other dashboard features */
-.container {
+.dashboard-container {
   background-color: var(--dark-blue);
   border-radius: 20px;
   display: flex;
