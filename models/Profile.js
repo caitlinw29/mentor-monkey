@@ -33,11 +33,7 @@ Profile.init(
         key: 'id',
       },
     },
-    // has_profile: {
-    //   type: DataTypes.BOOLEAN,
-    //   defaultValue: false,
-    // }
-  },
+    },
   {
     sequelize,
     timestamps: false,
