@@ -419,6 +419,10 @@ div.form-container {
     margin-left: 23%; 
   }
 
+  .user-join-div {
+    margin-left: 10%; 
+  }
+
   .chatform > button { 
     width: 25%;
   }
