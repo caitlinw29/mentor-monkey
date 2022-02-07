@@ -268,7 +268,7 @@ div.form-container {
   padding: 0.25rem; 
   width: 100%;
   display: flex;
-  min-height: 3rem; 
+  max-height: 3rem; 
   box-sizing: border-box; 
   backdrop-filter: blur(10px);
 }
