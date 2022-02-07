@@ -13,6 +13,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route to render the profile form 
+router.get('/profile_form', async (req, res) => {
+  try {
+    res.render('profile_form');
+  } catch (err) {
+    res.status(500).json(err);              
+  }
+});
+
+
 //route to render the dashboard, only if user is signed in
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
@@ -42,16 +52,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-//route to render the profile form 
-router.get('/profile_form', withAuth, async (req, res) => {
-  try {
-    res.render('profile_form', {
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 //Chat route
 router.get('/chat', async (req, res) => {
