@@ -401,14 +401,42 @@ form {
 }
 
 /* Mobile Freidnly UI */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 500px){
   .hero-image {
     display: none;
+  }
+
+  h1 { 
+    font-size: larger;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  .headings-font {
+    font-size: medium;
+  }
+
+  nav {
+    max-height: 100px;
+  }
+
+  .nav-links {
+    margin: 0px;
   }
 
   .hero-image-2 {
     display: inline;
     width: 100%;
   }
+  .text-width {
+    text-align: center;
+    margin: 25px;
+    max-width: 0px;
+    margin-left: 0px;
+    max-width: 300px;
+  }
+
 }
 
