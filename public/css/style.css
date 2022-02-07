@@ -455,3 +455,20 @@ form {
     width:75%
   }
 }
+
+.hero-image-2 {
+  display: none;
+}
+
+/* Mobile Freidnly UI */
+@media screen and (max-width: 900px){
+  .hero-image {
+    display: none;
+  }
+
+  .hero-image-2 {
+    display: inline;
+    width: 100%;
+  }
+}
+
