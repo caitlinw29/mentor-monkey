@@ -254,12 +254,18 @@ div.form-container {
   width: 700px;
 }
 
+.chat-header {
+  position: sticky;
+  top: 0px;
+  bottom: 0px;
+}
+
 .chat-container {
   background-color: var(--mint-green);
-  height: 798px;
-  width: 780px;
+  height: 700px;
+  width: 720px;
   margin-top: 10px;
-  border-radius: 15px;
+  border-radius: 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -270,8 +276,8 @@ div.form-container {
 .chatform { 
   background: rgba(28, 59, 114, 0.15); 
   padding: 0.25rem; 
-  position: relative;
-  bottom: 25px; 
+  position: sticky;
+  bottom: 0px; 
   min-width: 720px;
   display: flex;
   max-height: 3rem; 
