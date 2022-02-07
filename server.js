@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
   });
 });
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   // USE SERVER FOR CHAT - we connect app to server above
   server.listen(PORT, () => {
     console.log('http://localhost:3001');
