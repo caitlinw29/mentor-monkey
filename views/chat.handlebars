@@ -1,12 +1,16 @@
- <div class="container message-container">
-        <div class="row">
-            <div class="col">
-                <ul id="chatmessages"></ul>
-                    <form id="chatform" action="">
-                    <input id="chatinput" autocomplete="off" /><button>Send</button>
-                    </form>
-            </div>
-        </div>
-    </div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="./js/chat.js"></script>
+<div>
+    <h3 class="mt-4 text-center">Let's Talk Code!</h3>
+</div>
+
+<div class="chat-container mx-auto" style="overflow-y:scroll;">
+    <div id="message-container"></div>
+    
+    <form id="send-container" class="chatform" autocomplete="off">
+        <input type="text" class="chatinput" id="message-input">
+        <button type="submit" id="send-button" class="text-center">Send</button>
+    </form>
+</div>
+
+<script defer src="/socket.io/socket.io.js"></script>
+<script defer src="./js/chat.js"></script>
+

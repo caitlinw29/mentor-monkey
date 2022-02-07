@@ -1,80 +1,33 @@
-var socket = io();
+const socket = io();
     
-var messages = document.getElementById('chatmessages');
-var form = document.getElementById('chatform');
-var input = document.getElementById('chatinput');
+const messageContainer= document.getElementById('message-container');
+const messageForm = document.getElementById('send-container');
+const messageInput = document.getElementById('message-input');
 
-form.addEventListener('submit', function(e) {
+//if the chat-message comes through, take the data(message) and append it to page
+socket.on('chat-message', data => {
+  appendMessage(data);
+});
+
+messageForm.addEventListener('submit', e => {
   e.preventDefault();
-  if (input.value) {
-    socket.emit('chat message', input.value);
-    input.value = '';
-  }
-});
+  //take in the user messsage from the form and send it with socket.emit to server.js
+  const message = messageInput.value;
+  socket.emit('send-chat-message', message);
+  messageInput.value = '';
+  //This works to have the user message show up, problem is page is refreshing every message and getting rid of old messages
+  const myMessage = document.createElement('div');
+  myMessage.textContent = message;
+  messageContainer.appendChild(myMessage);
+  myMessage.classList.add('mymessage-div');
+})
 
-socket.on('chat message', function(msg) {
-  var item = document.createElement('li');
-  item.textContent = msg;
-  messages.appendChild(item);
-  window.scrollTo(0, document.body.scrollHeight);
-});
+//take the data and put the message in a div and append to page.
+const appendMessage = (message) => {
+  const messageElement = document.createElement('div');
+  messageElement.textContent = message;
+  messageElement.classList.add('message-div');
+  messageContainer.append(messageElement);
+}
 
 
-// console.log('checks for io')
-// var socket = io();
-
-// var messages = document.getElementById('chat-messages');
-// var form = document.getElementById('chat-form');
-// var input = document.getElementById('chat-input');
-
-// form.addEventListener('submit', function(e) {
-//   e.preventDefault();
-//   if (input.value) {
-//     socket.emit('chat message', input.value);
-//     input.value = '';
-//   }
-// });
-
-// socket.on('chat message', function(msg) {
-//   var item = document.createElement('li');
-//   item.textContent = msg;
-//   messages.appendChild(item);
-//   window.scrollTo(0, document.body.scrollHeight);
-// });
-
-// console.log('doesnt break before reaching script')  
-// let socket = io();
-//   console.log('declares io')
-// let messages = document.getElementById('chat-messages');
-//   console.log('grabs chat-messages')
-// let chatForm = document.getElementById('chat-form');
-//   console.log('grabs chat-form')
-// let input = document.getElementById('chat-input');
-//   console.log('grabs chat-input');
-  
-// // chatForm.addEventListener('submit', function(e) {
-// //   console.log('adds eventlistener to chat-form');
-// //   e.preventDefault();
-      
-// //   if (input.value) {
-// //     socket.emit('chat message', input.value);
-// //     input.value = '';
-// //   }
-// // });
-
-// chatForm.addEventListener('submit', function(e) {
-//   console.log('adds eventlistener to chat-form');
-//   // e.preventDefault();
-      
-//   // if (input.value) {
-//   //   socket.emit('chat message', input.value);
-//   //   input.value = '';
-//   // }
-// });
-
-// socket.on('chat message', function(msg) {
-//   var item = document.createElement('li');
-//   item.textContent = msg;
-//   messages.appendChild(item);
-//   window.scrollTo(0, document.body.scrollHeight);
-// });

@@ -249,68 +249,83 @@ div.form-container {
   display: none;
 }
 
+/* CHAT */
+.chat-container {
+  background-color: var(--mint-green);
+  height: 75vh;
+  width: 75%;
+  margin-top: 10px;
+  border-radius: 22px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 
-#chatform { 
-  background: rgba(0, 0, 0, 0.15); 
+
+.chatform { 
+  background: rgba(28, 59, 114, 0.15); 
   padding: 0.25rem; 
-  position: fixed;
-  bottom: 20px; 
-  min-width: 720px;
+  width: 100%;
   display: flex;
   min-height: 3rem; 
   box-sizing: border-box; 
   backdrop-filter: blur(10px);
 }
 
-/* .message-container {
-  bottom: 20%; 
-  left: 20%; 
-  right: 20%;
-  border: solid greenyellow;
-} */
-
-#chatinput { 
+.chatinput { 
   border: none; 
   padding: 0 1rem; 
   flex-grow: 1; 
   border-radius: 2rem; 
   margin: 0.25rem; 
+  background-color: #faf1e7; 
+  color: var(--dark-blue);
+  autocomplete: off;
 }
 
-#chatinput:focus { 
+.chatinput:focus { 
   outline: none; 
+  background-color: #fcf9f5; 
 }
 
-#chatform > button { 
-  background: var(--dark-blue);
-  border: none;
+.chatform > button { 
+  background-color: var(--dark-blue);
+  color: var(--beige);
   padding: 0 1rem; 
-  margin: 0.25rem; 
-  border-radius: 3px; 
-  outline: none; 
-  color: #fff; 
+  width: 15%;
+  height: 40px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 0px;
 }
 
-#chatmessages { 
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0; 
-  /* left: 0; 
-  right: 0;
-  border: solid hotpink; */
+#message-container {
+  width: 100%;
 }
 
-#chatmessages > li { 
-  padding: 0.5rem 1rem;
-  background-color: #e9eeea
+#message-container div {
+  display: flex;
+  justify-content: center;
+  padding: 8px 18px;
+  margin-top: 1%;
+  font-weight: bolder;
+  font-size: 18px;
+  border-radius: 25px;
+  width: 40%;
 }
 
-#chatmessages > li:nth-child(odd) {
-   background: white; 
+.message-div {
+  margin-left: 2%;
+  background-color: var(--dark-blue);
+  color: white;
 }
 
-.message-container {
-  max-width: 720px;
+.mymessage-div {
+  margin-left: 58%;
+  margin-right: 2%;
+  background-color: #fff3e6;
+  color: var(--dark-blue);  
 }
 
 
@@ -382,5 +397,27 @@ div.form-container {
     border-radius: 15px;
     display: flex; 
     flex-direction: row;
+  }
+
+  .chatform > button { 
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  #message-container div {
+    width: 75%;
+  }
+
+  .mymessage-div {
+    margin-left: 23%; 
+  }
+
+  .chatform > button { 
+    width: 25%;
+  }
+  
+  .chatinput { 
+    width:75%
   }
 }
