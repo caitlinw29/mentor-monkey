@@ -1,20 +1,51 @@
-//add the user's profile to the mentor list
-const addMentor = async () => {
+// const socket = io();
+// const addMentorRoomBtn = document.querySelector('#mentorBtn');
+// const removeMentorRoomBtn = document.querySelector('#removeMentorBtn');
+// const joinMentorRoomBtn = document.querySelector('.chooseMentor');
+
+// const createMentorRoom = (e) => {
+//   e.preventDefault()
+//   console.log('clicked')
+//   // Create Room
+//   io.of("/").adapter.on("create-room", (room) => {
+//     console.log(`room ${room} was created`);
+//   });
+// }
+
+// const joinMentorRoom = () => {
+//   // Join 
+//   io.of("/").adapter.on("join-room", (room, id) => {
+//     console.log(`socket ${id} has joined room ${room}`);
+//   });
+// }
+
+// const deleteMentorRoom = () => {
+//   // Delete Room
+//   io.of("/").adapter.on("delete-room", (room, id) => {
+//     console.log(`socket ${id} has deleted room ${room}`);
+//   });
+// }
+
+// removeMentorRoomBtn.addEventListener('click', deleteMentorRoom()) 
+// chooseMentor.addEventListener('click', chooseMentorRoom()) 
+
+// //add the user's profile to the mentor list
+// const addMentor = async () => {
   
-  const response = await fetch(`/api/dashboard`, {
-    method: 'PUT',
-    //no body - on route side, is_mentor is flipped to true
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+//   const response = await fetch(`/api/dashboard`, {
+//     method: 'PUT',
+//     //no body - on route side, is_mentor is flipped to true
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
  
-  if (response.ok) {
-    document.location.replace('/chat');
-  } else {
-    alert('Failed to add to mentor list');
-  }
-}
+//   if (response.ok) {
+//     document.location.replace('/chat');
+//   } else {
+//     alert('Failed to add to mentor list');
+//   }
+// }
 
 //remove profile from mentor list
 const removeMentor = async () => {
