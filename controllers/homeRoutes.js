@@ -38,9 +38,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
       }
     })
 
-    // const userInfo = userProfile.get({plain: true})
-    //   console.log(userInfo)
-    //  const mentorProfiles = profileData.map((profile) => profile.get({ plain: true }));
+    const userInfo = userProfile.get({plain: true})
+      console.log(userInfo)
+     const mentorProfiles = profileData.map((profile) => profile.get({ plain: true }));
 
     res.render('dashboard', {
        mentorProfiles,

@@ -6,9 +6,9 @@ const withAuth = require('../../utils/auth');
 router.put('/', withAuth, async (req, res) => {
   try {
     const profile = await Profile.update(
-    {
-      is_mentor: true,
-    },
+    // {
+    //   is_mentor: true,
+    // },
     {
       where: {
         user_id: req.session.user_id,
