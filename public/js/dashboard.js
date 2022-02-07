@@ -10,7 +10,7 @@ const addMentor = async () => {
   });
  
   if (response.ok) {
-    document.location.replace(`/dashboard`);
+    document.location.replace('/chat');
   } else {
     alert('Failed to add to mentor list');
   }
