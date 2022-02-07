@@ -1,15 +1,14 @@
 <div>
-<h3 class="mt-4 text-center">Let's Talk Code!</h3>
+    <h3 class="mt-4 text-center">Let's Talk Code!</h3>
 </div>
 
 <div class="chat-container mx-auto" style="overflow-y:scroll;">
-    <div class="message-big-box">
     <div id="message-container"></div>
-    </div>
-        <form id="send-container" class="chatform">
-            <input type="text" class="chatinput" id="message-input">
-            <button type="submit" id="send-button" class="text-center">Send</button>
-        </form>
+    
+    <form id="send-container" class="chatform" autocomplete="off">
+        <input type="text" class="chatinput" id="message-input">
+        <button type="submit" id="send-button" class="text-center">Send</button>
+    </form>
 </div>
 
 <script defer src="/socket.io/socket.io.js"></script>

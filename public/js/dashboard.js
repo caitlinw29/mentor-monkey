@@ -10,7 +10,7 @@ const addMentor = async () => {
   });
  
   if (response.ok) {
-    document.location.replace(`/dashboard`);
+    document.location.replace('/chat');
   } else {
     alert('Failed to add to mentor list');
   }
@@ -41,4 +41,13 @@ const chooseMentor = async () => {
 //user clicks buttons to add and remove their profile from mentor list
 document.getElementById('mentorBtn').addEventListener('click', addMentor);
 document.getElementById('removeMentorBtn').addEventListener('click', removeMentor);
-document.getElementById('chooseMentor').addEventListener('click', chooseMentor);
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    console.log(button);
+    if (button.classList.contains("chooseMentor")){
+      chooseMentor();
+    }
+  })
+});

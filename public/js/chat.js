@@ -19,14 +19,14 @@ messageForm.addEventListener('submit', e => {
   const myMessage = document.createElement('div');
   myMessage.textContent = message;
   messageContainer.appendChild(myMessage);
-  myMessage.classList.add('message-div');
+  myMessage.classList.add('mymessage-div');
 })
 
 //take the data and put the message in a div and append to page.
 const appendMessage = (message) => {
   const messageElement = document.createElement('div');
   messageElement.textContent = message;
-  messageElement.className = "message-div";
+  messageElement.classList.add('message-div');
   messageContainer.append(messageElement);
 }
 

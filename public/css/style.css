@@ -252,13 +252,13 @@ div.form-container {
 /* CHAT */
 .chat-container {
   background-color: var(--mint-green);
-  height: 700px;
-  width: 720px;
+  height: 75vh;
+  width: 75%;
   margin-top: 10px;
   border-radius: 22px;
+  position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -266,9 +266,7 @@ div.form-container {
 .chatform { 
   background: rgba(28, 59, 114, 0.15); 
   padding: 0.25rem; 
-  position: sticky;
-  bottom: 0px; 
-  min-width: 720px;
+  width: 100%;
   display: flex;
   max-height: 3rem; 
   box-sizing: border-box; 
@@ -283,6 +281,7 @@ div.form-container {
   margin: 0.25rem; 
   background-color: #faf1e7; 
   color: var(--dark-blue);
+  autocomplete: off;
 }
 
 .chatinput:focus { 
@@ -294,43 +293,39 @@ div.form-container {
   background-color: var(--dark-blue);
   color: var(--beige);
   padding: 0 1rem; 
-  width: 10%;
+  width: 15%;
   height: 40px;
   border-radius: 15px;
   text-align: center;
   margin-top: 0px;
 }
 
-.message-big-box {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 35px;
+#message-container {
+  width: 100%;
 }
 
 #message-container div {
+  display: flex;
+  justify-content: center;
   padding: 8px 18px;
-  background-color: var(--dark-blue);
-  color: beige;
+  margin-top: 1%;
   font-weight: bolder;
   font-size: 18px;
   border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  /* width: 720px; */
-}
-
-#message-container div:nth-child(2n) {
-  padding: 8px 18px;
-  background-color: #fff3e6;
-  color: var(--dark-blue);
-  border-radius: 25px;
+  width: 40%;
 }
 
 .message-div {
-  display: flex;
-  position: relative;
-  margin-left: 400px;
-  padding-right: 30px;
+  margin-left: 2%;
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+.mymessage-div {
+  margin-left: 58%;
+  margin-right: 2%;
+  background-color: #fff3e6;
+  color: var(--dark-blue);  
 }
 
 
@@ -402,5 +397,27 @@ div.form-container {
     border-radius: 15px;
     display: flex; 
     flex-direction: row;
+  }
+
+  .chatform > button { 
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  #message-container div {
+    width: 75%;
+  }
+
+  .mymessage-div {
+    margin-left: 23%; 
+  }
+
+  .chatform > button { 
+    width: 25%;
+  }
+  
+  .chatinput { 
+    width:75%
   }
 }
