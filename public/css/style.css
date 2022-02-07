@@ -84,11 +84,6 @@ nav {
   font-weight: bold;
 }
 
-/* we can add a footer later if we need to */
-/* footer {
-  background-color: var(--dark-blue);
-  height: 100px;
-} */
 
 /* images */
 section .hero-image {
@@ -256,19 +251,6 @@ form {
   flex-direction: row;
 }
 
-<<<<<<< HEAD
-=======
-/* responsive hamburger button*/
-.hamburger {
-  position: absolute;
-  top: 25px;
-  right: 40px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40px;
-}
->>>>>>> cdf56a4b8b6537d56099e91b278f7f89bd84f387
 
 
 /* CHAT */
@@ -350,30 +332,18 @@ form {
   color: var(--dark-blue);
 }
 
-<<<<<<< HEAD
 /* responsive - the following are not displayed when screen size is above 810 */
-/* .hamburger {
-  position: absolute;
-  top: 25px;
-  right: 40px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between; 
-  width: 40px; 
-} */
-
-.log-hamburger {
+.log-small {
   display: none;
 }
 
-=======
 .user-join-div {
   margin-left: 33%;
   background-color: var(--teal);
   color: #fff3e6;
 }
->>>>>>> cdf56a4b8b6537d56099e91b278f7f89bd84f387
 
+/* responsive - the following is for a smaller screen of 810 or less */
 @media screen and (max-width: 810px) {
   h1 {
     margin-bottom: 0;
@@ -391,66 +361,11 @@ form {
   }
 
 
-  div.hamburger {
-    display: flex;
-  }
-
-  .hamburger:hover {
-    cursor: pointer;
-    opacity: 80%;
-  }
-
-  .log-hamburger {
+  .log-small {
     display: flex;
   }
 
   
-
-  /* .nav-links {
-    display: none;
-  }
-
-<<<<<<< HEAD
-  .nav-links {
-    display: flex; 
-=======
-  .nav-links.active {
-    display: flex;
->>>>>>> cdf56a4b8b6537d56099e91b278f7f89bd84f387
-    flex-direction: row;
-    color: var(--mint-green);
-    font-weight: bold;
-    margin-top: 0;
-  }
-
-  .nav-links:hover {
-    color: var(--beige);
-  }
-
-  /* .dashboard {
-    display: none;
-  }
-
-  .dashboard.active {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .log-hamburger {
-    display: none;
-  }
-
-  .log-hamburger.active {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .overlay {
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-  } */
-
   .chatform > button {
     width: 30%;
   }
