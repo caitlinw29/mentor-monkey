@@ -134,14 +134,19 @@ p.text-width {
 form {
   margin-top: 30px;
   background-color: var(--mint-green);
-  width: 50%;
+  width: 100%;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 div.form-container {
-  margin-left: 50px;
-  width: 100%;
+  width: 50%;
+  background-color: var(--mint-green);
+  border-radius: 20px;
+  margin-top: 50px;
 }
+
 
 /* sign up and login buttons */
 .button {
@@ -161,6 +166,13 @@ div.form-container {
 .user-type {
   margin-top: 25px;
 }
+
+.profile-button {
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+}
+
 
 /* dashboard buttons */
 .blue-button {

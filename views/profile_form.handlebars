@@ -1,34 +1,33 @@
 <!--Form to create a profile-->
-<div class="mx-auto row col-12">
-    <div class="form-container">
-        <h3 class="text-center">Create a Profile:</h3>
+    <div class="form-container pt-2 pb-4 mx-auto">
+        <h3 class="text-center">Create a Profile</h3>
         
-        <form class="mx-auto form new-profile-form">
-            <div class="form-container">
-                <div class="row">
+        <form class="mx-auto new-profile-form">
+            <div class="form">
+                <div class="row form-group">
                     <label for="user-name" class="col-form-label">What would you like to be called?</label>
                 </div>
-                <div class="col-md-12">    
-                    <input type="text" id="user-name" name="user-name" style="width:80%" placeholder="Name"></input>
+                <div class="col-md-12 form-group">    
+                    <input type="text" id="user-name" class="form-control w-100" name="user-name" style="width:80%" placeholder="Name"></input>
                 </div>
-                <div class="row">
+                <div class="form-group row">
                     <label for="user-language" class="col-form-label">What languages or tools would you feel comfortable mentoring someone in?</label>
                 </div>
                 <div class="col-md-12">    
-                    <input type="text" id="user-language" name="user-language" style="width:80%" placeholder="None, JavaScript, Python, Github, etc."></input>
+                    <input type="text" id="user-language" class="form-control w-100" name="user-language" style="width:80%" placeholder="None, JavaScript, Python, Github, etc."></input>
                 </div>
-                <div class="row">
-                    <label for="user-about" class="col-form-label">About:</label>
+                <div class="form-group row">
+                    <label for="user-about" class="col-form-label">About</label>
                 </div>
                 <div class="col-md-12">
-                    <input type="text" id="user-about" name="user-about" style="width:80%" placeholder="Tell us about yourself!"></input>
+                    <input type="text" id="user-about" class="form-control w-100" name="user-about" style="width:80%" placeholder="Tell us about yourself!"></input>
                 </div>
-                <div class="row">
-                    <button type="submit" class="btn button w-75">Submit</button>
+                <div class="profile-button col-md-12">
+                    <button type="submit" class="btn button">Submit</button>
                 </div>
             </div>
         </form>
     </div>
-</div>
+
 
 <script src="/js/profile.js"></script>
