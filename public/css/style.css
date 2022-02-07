@@ -332,6 +332,12 @@ div.form-container {
   color: var(--dark-blue);  
 }
 
+.user-join-div {
+  margin-left: 33%;
+  background-color: var(--teal);
+  color: #fff3e6;  
+}
+
 
 @media screen and (max-width: 810px) {  
   
@@ -415,6 +421,10 @@ div.form-container {
 
   .mymessage-div {
     margin-left: 23%; 
+  }
+
+  .user-join-div {
+    margin-left: 10%; 
   }
 
   .chatform > button { 
