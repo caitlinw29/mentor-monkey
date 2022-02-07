@@ -257,7 +257,7 @@ div.form-container {
 .chat-container {
   background-color: var(--mint-green);
   height: 798px;
-  width: 900px;
+  width: 780px;
   margin-top: 10px;
   border-radius: 15px;
   display: flex;
@@ -265,6 +265,7 @@ div.form-container {
   align-items: center;
   flex-direction: column;
 }
+
 
 .chatform { 
   background: rgba(28, 59, 114, 0.15); 
@@ -305,7 +306,11 @@ div.form-container {
   margin-top: 0px;
 }
 
-
+.message-big-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 35px;
+}
 
 #message-container div {
   padding: 8px 18px;
@@ -314,6 +319,9 @@ div.form-container {
   font-weight: bolder;
   font-size: 18px;
   border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  /* width: 900px; */
 }
 
 #message-container div:nth-child(2n) {
@@ -323,6 +331,12 @@ div.form-container {
   color: beige;
 }
 
+.message-div {
+  display: flex;
+  position: relative;
+  margin-left: 500px;
+  padding-right: 30px;
+}
 
 
 @media screen and (max-width: 810px) {  
