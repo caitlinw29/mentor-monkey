@@ -250,16 +250,6 @@ div.form-container {
 }
 
 /* CHAT */
-.hr-line {
-  width: 700px;
-}
-
-.chat-header {
-  position: sticky;
-  top: 0px;
-  bottom: 0px;
-}
-
 .chat-container {
   background-color: var(--mint-green);
   height: 700px;
@@ -306,7 +296,6 @@ div.form-container {
   padding: 0 1rem; 
   width: 10%;
   height: 40px;
-  box-shadow: 1px 2px 2px gray;
   border-radius: 15px;
   text-align: center;
   margin-top: 0px;
@@ -320,27 +309,27 @@ div.form-container {
 
 #message-container div {
   padding: 8px 18px;
-  background-color: beige;
-  color: var(--maroon);
+  background-color: var(--dark-blue);
+  color: beige;
   font-weight: bolder;
   font-size: 18px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
-  /* width: 900px; */
+  /* width: 720px; */
 }
 
 #message-container div:nth-child(2n) {
   padding: 8px 18px;
-  background-color: var(--dark-blue);
+  background-color: #fff3e6;
+  color: var(--dark-blue);
   border-radius: 25px;
-  color: beige;
 }
 
 .message-div {
   display: flex;
   position: relative;
-  margin-left: 500px;
+  margin-left: 400px;
   padding-right: 30px;
 }
 
