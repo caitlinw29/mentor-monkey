@@ -132,13 +132,26 @@ p.text-width {
 form {
   margin-top: 30px;
   background-color: var(--mint-green);
-  width: 50%;
+  width: 100%;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-div.form-container {
-  margin-left: 50px;
-  width: 100%;
+.form-container {
+  width: 50%;
+  background-color: var(--mint-green);
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.account-width {
+  width: 80%;
+}
+
+.account-form {
+  width: 500px;
+  padding: 10px;
 }
 
 /* sign up and login buttons */
@@ -159,6 +172,13 @@ div.form-container {
 .user-type {
   margin-top: 25px;
 }
+
+.profile-button {
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+}
+
 
 /* dashboard buttons */
 .blue-button {
