@@ -52,6 +52,10 @@ io.on('connection', (socket) => {
     //broadcast will send to all users except current user
     socket.broadcast.emit('chat-message', {message: message, username:users[socket.id]});
   });
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('user-disconnected', users[socket.id]);
+    delete users[socket.id];
+  })
 });
 
 sequelize.sync({ force: false }).then(() => {

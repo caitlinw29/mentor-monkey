@@ -30,6 +30,10 @@ socket.on('user-connected', username => {
   appendNewUserJoin(`${username} connected`);
 });
 
+socket.on('user-disconnected', username => {
+  appendNewUserJoin(`${username} disconnected`);
+});
+
 //if the chat-message comes through, take the data(message) and append it to page
 socket.on('chat-message', (data) => {
   appendMessage(`${data.username}: ${data.message}`);
