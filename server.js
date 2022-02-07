@@ -41,11 +41,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // socket.io connection
+const users = {};
 
 io.on('connection', (socket) => {
+  socket.on('new-user', username => {
+    users[socket.id] = username;
+    socket.broadcast.emit('user-connected', username);
+  })
   socket.on('send-chat-message', (message) => {
     //broadcast will send to all users except current user
-    socket.broadcast.emit('chat-message', message);
+    socket.broadcast.emit('chat-message', {message: message, username:users[socket.id]});
   });
 });
 
