@@ -45,7 +45,6 @@ document.getElementById('removeMentorBtn').addEventListener('click', removeMento
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
-    console.log(button);
     if (button.classList.contains("chooseMentor")){
       chooseMentor();
     }
