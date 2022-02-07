@@ -1,9 +1,9 @@
 :root {
-  --dark-blue: #1B4079;
-  --teal: #4D7C8A;
-  --maroon: #B75D69;
-  --beige: #DDC9B4;
-  --mint-green: #C9E4CA;
+  --dark-blue: #1b4079;
+  --teal: #4d7c8a;
+  --maroon: #b75d69;
+  --beige: #ddc9b4;
+  --mint-green: #c9e4ca;
   --white: #ffffff;
   --black: #000000;
 }
@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: var(--beige); 
+  background-color: var(--beige);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -64,7 +64,6 @@ nav {
   cursor: pointer;
 }
 
-
 /* carousel */
 .carousel-indicators li {
   width: 10px;
@@ -94,7 +93,7 @@ nav {
 /* images */
 section .hero-image {
   width: 100%;
-  object-fit: cover;  
+  object-fit: cover;
   opacity: 90%;
 }
 
@@ -108,10 +107,9 @@ section .hero-image {
   color: var(--maroon);
 }
 
-
 /* testimonial box */
 .text-center {
-  margin-top: 25px; 
+  margin-top: 25px;
   margin-bottom: 25px;
   color: var(--dark-blue);
 }
@@ -265,8 +263,8 @@ form {
   right: 40px;
   display: none;
   flex-direction: column;
-  justify-content: space-between; 
-  width: 40px; 
+  justify-content: space-between;
+  width: 40px;
 }
 
 .log-hamburger {
@@ -286,37 +284,37 @@ form {
   flex-direction: column;
 }
 
-
-.chatform { 
-  background: rgba(28, 59, 114, 0.15); 
-  padding: 0.25rem; 
+.chatform {
+  background: rgba(28, 59, 114, 0.15);
+  padding: 0.25rem;
   width: 100%;
   display: flex;
-  max-height: 3rem; 
-  box-sizing: border-box; 
+  max-height: 3rem;
+  box-sizing: border-box;
   backdrop-filter: blur(10px);
+  position: sticky;
 }
 
-.chatinput { 
-  border: none; 
-  padding: 0 1rem; 
-  flex-grow: 1; 
-  border-radius: 2rem; 
-  margin: 0.25rem; 
-  background-color: #faf1e7; 
+.chatinput {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+  background-color: #faf1e7;
   color: var(--dark-blue);
   autocomplete: off;
 }
 
-.chatinput:focus { 
-  outline: none; 
-  background-color: #fcf9f5; 
+.chatinput:focus {
+  outline: none;
+  background-color: #fcf9f5;
 }
 
-.chatform > button { 
+.chatform > button {
   background-color: var(--dark-blue);
   color: var(--beige);
-  padding: 0 1rem; 
+  padding: 0 1rem;
   width: 15%;
   height: 40px;
   border-radius: 15px;
@@ -349,18 +347,16 @@ form {
   margin-left: 58%;
   margin-right: 2%;
   background-color: #fff3e6;
-  color: var(--dark-blue);  
+  color: var(--dark-blue);
 }
 
 .user-join-div {
   margin-left: 33%;
   background-color: var(--teal);
-  color: #fff3e6;  
+  color: #fff3e6;
 }
 
-
-@media screen and (max-width: 810px) {  
-  
+@media screen and (max-width: 810px) {
   h1 {
     margin-bottom: 0;
     margin-top: 10px;
@@ -394,7 +390,7 @@ form {
   }
 
   .nav-links.active {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     color: var(--mint-green);
     font-weight: bold;
@@ -410,7 +406,7 @@ form {
   }
 
   .dashboard.active {
-    display: flex; 
+    display: flex;
     flex-direction: row;
   }
 
@@ -419,39 +415,39 @@ form {
   }
 
   .log-hamburger.active {
-    display: flex; 
+    display: flex;
     flex-direction: row;
   }
 
   .overlay {
     border-radius: 15px;
-    display: flex; 
+    display: flex;
     flex-direction: row;
   }
 
-  .chatform > button { 
+  .chatform > button {
     width: 30%;
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   #message-container div {
     width: 75%;
   }
 
   .mymessage-div {
-    margin-left: 23%; 
+    margin-left: 23%;
   }
 
   .user-join-div {
-    margin-left: 10%; 
+    margin-left: 10%;
   }
 
-  .chatform > button { 
+  .chatform > button {
     width: 25%;
   }
-  
-  .chatinput { 
-    width:75%
+
+  .chatinput {
+    width: 75%;
   }
 }
