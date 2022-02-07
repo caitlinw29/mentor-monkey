@@ -151,6 +151,10 @@ form {
   width: 80%;
 }
 
+.login-form {
+  width: 500px;
+  padding: 10px;
+}
 
 /* sign up and login buttons */
 .button {
