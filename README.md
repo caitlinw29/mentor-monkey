@@ -76,9 +76,7 @@ This project is licensed under: [MIT](https://opensource.org/licenses/MIT)
 
 * [Caitlin Wall](https://github.com/caitlinw29): caitlinwall96@gmail.com
 * [Steph Fajardo](https://github.com/stephtf): stfajardo@gmail.com
-* [Steven Lofquist](https://github.com/StevenLof777):
-lof.steven@gmail.com
-
+* [Steven Lofquist](https://github.com/StevenLof777): lof.steven@gmail.com
 * [Alisa Wolfram](https://github.com/ealisa818): ealisa818@gmail.com
     
 ## Deployed Link
