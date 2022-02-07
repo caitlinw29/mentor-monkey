@@ -19,7 +19,7 @@ const signupForm = async (event) => {
           headers: { 'Content-Type': 'application/json'},
       });
     if (response.ok) {
-      // If successful, redirect the browser to the dashboard
+      // If successful, redirect the browser to the profile form
       document.location.replace('/profile_form');
     } else {
       alert('Username already exists!'); 

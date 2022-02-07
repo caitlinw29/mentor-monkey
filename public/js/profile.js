@@ -13,6 +13,7 @@ const profileHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         })
         if (response.ok) {
+            console.log("hello")
             // If successful, redirect the browser to the dashboard
             document.location.replace('/dashboard');
         } else {
