@@ -204,6 +204,7 @@ div.form-container {
 
 .card-mentor {
   margin-top: 25px;
+  margin: 10px;
   text-align: left;
   background-color: var(--mint-green);
   color: var(--dark-blue);
@@ -228,10 +229,13 @@ div.form-container {
   margin-bottom: 5px;
 }
 
+.card-title {
+  width: 100%;
+}
+
 .card-block {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
 }
 
 /* responsive hamburger button*/
