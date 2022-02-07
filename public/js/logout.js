@@ -20,4 +20,10 @@ const logout = async () => {
   }
 };
 
-document.querySelector('#logout').addEventListener('click', logout);
+//for each logout option, add event listener to logout if clicked
+const logouts = document.getElementsByClassName('logout');
+for (let i = 0; i < logouts.length; i++) {
+  logouts[i].addEventListener('click', () => {
+    logout();
+  })
+}
