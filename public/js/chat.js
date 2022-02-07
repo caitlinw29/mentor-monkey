@@ -26,11 +26,11 @@ appendNewUserJoin('You joined');
 
 socket.emit('new-user', username);
 
-socket.on('user-connected', username => {
+socket.on('user-connected', (username) => {
   appendNewUserJoin(`${username} connected`);
 });
 
-socket.on('user-disconnected', username => {
+socket.on('user-disconnected', (username) => {
   appendNewUserJoin(`${username} disconnected`);
 });
 
@@ -50,6 +50,11 @@ messageForm.addEventListener('submit', (e) => {
   myMessage.textContent = `You: ${message}`;
   messageContainer.appendChild(myMessage);
   myMessage.classList.add('mymessage-div');
+  scrollToBottom();
 });
 
-
+//chat will automatically scroll to bottom when you send a message
+function scrollToBottom () {
+  var div = document.getElementById('message-container');
+  div.scrollTop = div.scrollHeight - div.clientHeight;
+}
