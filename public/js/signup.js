@@ -5,12 +5,13 @@ const signupForm = async (event) => {
   const username = document.querySelector('#user-signup').value.trim(); 
   const password = document.querySelector('#password-signup').value.trim();
   
-  // const rePassword = document.querySelector('#password-reenter').value.trim();
+  const rePassword = document.querySelector('#password-reenter').value.trim();
   
-  // if (password !== rePassword) {
-  //   alert('Passwords do not match! Please re-enter your password');
-  //   document.location.replace
-  // }
+  if (password !== rePassword) {
+    alert('Passwords do not match! Please re-enter your password');
+    document.location.replace;
+    return false;
+  };
   
   if (username && password) {
       const response = await fetch('/api/users', {
@@ -19,8 +20,8 @@ const signupForm = async (event) => {
           headers: { 'Content-Type': 'application/json'},
       });
     if (response.ok) {
-      // If successful, redirect the browser to the dashboard
-      document.location.replace('/dashboard');
+      // If successful, redirect the browser to the profile form
+      document.location.replace('/profile_form');
     } else {
       alert('Username already exists!'); 
     }

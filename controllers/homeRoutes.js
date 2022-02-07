@@ -13,14 +13,20 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route to render the profile form 
+router.get('/profile_form', async (req, res) => {
+  try {
+    res.render('profile_form');
+  } catch (err) {
+    res.status(500).json(err);              
+  }
+});
+
+
 //route to render the dashboard, only if user is signed in
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    //find all profiles where is_mentor is true to display the profiles of those who wish to be on the current mentor list
-    const profileData = await Profile.findAll({
-      subQuery: false,
-      where: { is_mentor: true } 
-    });
+       const profileData = await Profile.findAll({ where: { is_mentor: true } });
 
     const mentorProfiles = profileData.map((profile) => profile.get({ plain: true }));
 
@@ -33,16 +39,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-//route to render the profile form 
-router.get('/profile_form', withAuth, async (req, res) => {
-  try {
-    res.render('profile_form', {
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 //Chat route
 router.get('/chat', async (req, res) => {
