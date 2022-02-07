@@ -285,7 +285,7 @@ form {
   margin: 0.25rem;
   background-color: #faf1e7;
   color: var(--dark-blue);
-  autocomplete: off;
+  /* autocomplete: off; */
 }
 
 .chatinput:focus {
@@ -406,6 +406,10 @@ form {
     display: none;
   }
 
+  .landing-page-description  {
+    font-size: medium;
+  }
+
   h1 { 
     font-size: larger;
   }
@@ -430,12 +434,18 @@ form {
     display: inline;
     width: 100%;
   }
-  .text-width {
+
+  p.text-width {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .carousel-text {
     text-align: center;
     margin: 25px;
-    max-width: 0px;
-    margin-left: 0px;
-    max-width: 300px;
+    /* max-width: 0px; */
+    /* margin-left: 0px; */
+    /* max-width: 300px; */
   }
 
 }
