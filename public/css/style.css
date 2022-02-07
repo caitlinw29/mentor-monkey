@@ -140,11 +140,15 @@ form {
   justify-content: center;
 }
 
-div.form-container {
+.form-container {
   width: 50%;
   background-color: var(--mint-green);
   border-radius: 20px;
   margin-top: 50px;
+}
+
+.login-width {
+  width: 80%;
 }
 
 
