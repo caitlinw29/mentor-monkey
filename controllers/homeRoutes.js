@@ -41,8 +41,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 
 //Chat route
-router.get('/chat', async (req, res) => {
-  console.log('route is made')
+router.get('/chat', withAuth, async (req, res) => {
   try{
     res.render('chat', {
       logged_in: true
@@ -50,7 +49,6 @@ router.get('/chat', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-  console.log('TRIES ROUTE')
 });
 
 //route to render the signup form 
