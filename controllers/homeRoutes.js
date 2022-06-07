@@ -41,7 +41,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 
 //Chat route
-router.get('/chat/:id', withAuth, async (req, res) => {
+router.get('/chat', withAuth, async (req, res) => {
   try{
     res.render('chat', {
       logged_in: true
